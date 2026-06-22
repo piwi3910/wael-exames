@@ -12,6 +12,9 @@ TRANSCRIBE_PROMPT = (
     "IGNORE instruction text, rubric lines, section-overview lines such as "
     "'Section A: Comprehension (20 marks)', headings, footers, page numbers, and "
     "reading passages that have no answer blank. "
+    "Also IGNORE the cover/registration page and all exam metadata — do NOT turn the "
+    "examination name, subject, date, time, duration, total marks, the conducting "
+    "authority, or the candidate's name/index number into questions. "
     "Return ONLY a JSON array; each element has keys: "
     '"section" (the section letter/number this question belongs to, or null), '
     '"question_no" (e.g. "1a"), '

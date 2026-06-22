@@ -97,15 +97,15 @@ grades under `out/` are from this run:
 
 | Paper | Grade /100 | Raw | Questions | Blank |
 |-------|-----------|-----|-----------|-------|
-| Math    | 71.4 | 40/56  | 38 | 0  |
-| English | 62.4 | 88/141 | 75 | 10 |
-| SET     | 61.0 | 61/100 | 66 | 1  |
+| Math    | 77.6 | 45/58  | 38 | 0 |
+| English | 55.9 | 81/145 | 69 | 0 |
+| SET     | 72.0 | 72/100 | 60 | 0 |
 
 The "raw" denominator is the sum of the transcribed `max_marks`. It still drifts from the
-paper's true 100 (English 141, Math 56) because the vision model reads per-question marks
-imperfectly — the normalized `/100` grade absorbs that, but the **only true fix is feeding
-the official marking guide** (the `MarkScheme` interface is built for it). Treat these as a
-pipeline demonstration; LLM-judge scores also vary run-to-run.
+paper's true 100 (English 145) because the vision model reads per-question marks imperfectly —
+the normalized `/100` grade absorbs that, but the **only true fix is feeding the official
+marking guide** (see [Marking guide](#marking-guide-deterministic-accurate-grading)). Treat
+these as a pipeline demonstration; LLM-judge scores also vary run-to-run.
 
 ## Performance
 

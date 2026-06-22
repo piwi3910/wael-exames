@@ -15,36 +15,44 @@
       "question_no": "1b",
       "max_marks": 2.0,
       "question_text": "What does the boy do on his first day of school?",
-      "student_answer": "He meets his teacher and makes new friends.",
+      "student_answer": "He meets his teacher and classmates.",
       "read_confidence": 0.9
     },
     {
       "section": "A",
       "question_no": "1c",
       "max_marks": 2.0,
-      "question_text": "Why is the boy excited about school?",
-      "student_answer": "Because he gets to learn new things and make new friends.",
+      "question_text": "Why is the boy excited?",
+      "student_answer": "He is excited because he gets to see his new school and make new friends.",
       "read_confidence": 0.9
     },
     {
       "section": "A",
       "question_no": "1d",
       "max_marks": 2.0,
-      "question_text": "What is the boy's favorite subject?",
-      "student_answer": "His favorite subject is math.",
+      "question_text": "What does the boy do after school?",
+      "student_answer": "He goes home and tells his parents about his day.",
       "read_confidence": 0.9
     },
     {
       "section": "A",
       "question_no": "1e",
       "max_marks": 2.0,
-      "question_text": "What does the boy do after school?",
-      "student_answer": "He goes home and does his homework.",
+      "question_text": "What is the boy's favorite part of the day?",
+      "student_answer": "His favorite part is playing with his new friends during recess.",
       "read_confidence": 0.9
     },
     {
       "section": "B",
       "question_no": "2a",
+      "max_marks": 2.0,
+      "question_text": "What is the opposite of 'tall'?",
+      "student_answer": "short",
+      "read_confidence": 0.95
+    },
+    {
+      "section": "B",
+      "question_no": "2b",
       "max_marks": 2.0,
       "question_text": "What is the opposite of 'happy'?",
       "student_answer": "sad",
@@ -52,34 +60,26 @@
     },
     {
       "section": "B",
-      "question_no": "2b",
-      "max_marks": 2.0,
-      "question_text": "What is the synonym of 'big'?",
-      "student_answer": "large",
-      "read_confidence": 0.95
-    },
-    {
-      "section": "B",
       "question_no": "2c",
       "max_marks": 2.0,
-      "question_text": "What is the plural of 'child'?",
-      "student_answer": "children",
+      "question_text": "What is the opposite of 'hot'?",
+      "student_answer": "cold",
       "read_confidence": 0.95
     },
     {
       "section": "B",
       "question_no": "2d",
       "max_marks": 2.0,
-      "question_text": "What is the past tense of 'go'?",
-      "student_answer": "went",
+      "question_text": "What is the opposite of 'fast'?",
+      "student_answer": "slow",
       "read_confidence": 0.95
     },
     {
       "section": "B",
       "question_no": "2e",
       "max_marks": 2.0,
-      "question_text": "What is the past tense of 'eat'?",
-      "student_answer": "ate",
+      "question_text": "What is the opposite of 'big'?",
+      "student_answer": "small",
       "read_confidence": 0.95
     },
     {
@@ -87,53 +87,53 @@
       "question_no": "3a",
       "max_marks": 2.0,
       "question_text": "Write a sentence using the word 'beautiful'.",
-      "student_answer": "The garden is beautiful.",
+      "student_answer": "The garden is beautiful with colorful flowers.",
       "read_confidence": 0.9
     },
     {
       "section": "C",
       "question_no": "3b",
       "max_marks": 2.0,
-      "question_text": "Write a sentence using the word 'quickly'.",
-      "student_answer": "The cat ran quickly.",
+      "question_text": "Write a sentence using the word 'quick'.",
+      "student_answer": "The rabbit ran quick across the field.",
       "read_confidence": 0.9
     },
     {
       "section": "C",
       "question_no": "3c",
       "max_marks": 2.0,
-      "question_text": "Write a sentence using the word 'together'.",
-      "student_answer": "We played together.",
+      "question_text": "Write a sentence using the word 'loud'.",
+      "student_answer": "The music was loud and everyone danced.",
       "read_confidence": 0.9
     },
     {
       "section": "C",
       "question_no": "3d",
       "max_marks": 2.0,
-      "question_text": "Write a sentence using the word 'important'.",
-      "student_answer": "It is important to be kind.",
+      "question_text": "Write a sentence using the word 'clean'.",
+      "student_answer": "The classroom is clean and tidy.",
       "read_confidence": 0.9
     },
     {
       "section": "C",
       "question_no": "3e",
       "max_marks": 2.0,
-      "question_text": "Write a sentence using the word 'different'.",
-      "student_answer": "We are all different.",
+      "question_text": "Write a sentence using the word 'kind'.",
+      "student_answer": "My teacher is kind and always helps me.",
       "read_confidence": 0.9
     },
     {
       "section": "D",
       "question_no": "4",
       "max_marks": 15.0,
-      "question_text": "Write a composition about your favorite holiday. Include what you did, who you were with, and why you liked it.",
-      "student_answer": "My favorite holiday is Christmas. I spend it with my family. We decorate the tree and eat a big meal. I like it because I get presents and I can see my cousins. We sing carols and watch movies. It is a happy time.",
+      "question_text": "Write a short story about a day at the park.",
+      "student_answer": "It was a sunny day and I went to the park with my family. We played on the swings and slid down the slide. I fed the ducks in the pond and they quacked loudly. We had a picnic and ate sandwiches and fruit. I felt very happy and tired when we went home. I can't wait to go back to the park again.",
       "read_confidence": 0.85
     },
     {
       "section": "A",
       "question_no": "1a",
-      "max_marks": 2.0,
+      "max_marks": 5.0,
       "question_text": "Name the four major food groups.",
       "student_answer": "",
       "read_confidence": 0.0
@@ -141,77 +141,29 @@
     {
       "section": "A",
       "question_no": "1b",
-      "max_marks": 2.0,
-      "question_text": "Which food group gives us energy?",
+      "max_marks": 5.0,
+      "question_text": "What are carbohydrates?",
       "student_answer": "",
       "read_confidence": 0.0
     },
     {
       "section": "A",
       "question_no": "1c",
-      "max_marks": 2.0,
-      "question_text": "Name one food that is a body-building food.",
+      "max_marks": 5.0,
+      "question_text": "What are proteins?",
       "student_answer": "",
       "read_confidence": 0.0
     },
     {
       "section": "A",
       "question_no": "1d",
-      "max_marks": 2.0,
-      "question_text": "Which food group helps to keep our bodies warm?",
+      "max_marks": 5.0,
+      "question_text": "What are fats?",
       "student_answer": "",
       "read_confidence": 0.0
     },
     {
-      "section": "A",
-      "question_no": "1e",
-      "max_marks": 2.0,
-      "question_text": "Name one food that gives us vitamins.",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "A",
-      "question_no": "1f",
-      "max_marks": 2.0,
-      "question_text": "Which food group helps to remove waste products from the body?",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "A",
-      "question_no": "1g",
-      "max_marks": 2.0,
-      "question_text": "Name one food that helps to keep our bodies cool.",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "A",
-      "question_no": "1h",
-      "max_marks": 2.0,
-      "question_text": "Why is it important to eat a balanced diet?",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "A",
-      "question_no": "1i",
-      "max_marks": 2.0,
-      "question_text": "Name one food that is a source of water.",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "A",
-      "question_no": "1j",
-      "max_marks": 2.0,
-      "question_text": "Name one food that helps to boost our immunity.",
-      "student_answer": "",
-      "read_confidence": 0.0
-    },
-    {
-      "section": "1",
+      "section": null,
       "question_no": "1i",
       "max_marks": 1.0,
       "question_text": "What do we need food for?",
@@ -219,7 +171,7 @@
       "read_confidence": 0.95
     },
     {
-      "section": "1",
+      "section": null,
       "question_no": "1ii",
       "max_marks": 1.0,
       "question_text": "How many major groups of food that are mentioned in the passage?",
@@ -227,7 +179,7 @@
       "read_confidence": 0.95
     },
     {
-      "section": "1",
+      "section": null,
       "question_no": "1iii",
       "max_marks": 1.0,
       "question_text": "Which of the following is NOT one of the food groups mentioned in the passage?",
@@ -235,7 +187,7 @@
       "read_confidence": 0.95
     },
     {
-      "section": "1",
+      "section": null,
       "question_no": "1iv",
       "max_marks": 1.0,
       "question_text": "What is the primary function of carbohydrates in our bodies?",
@@ -243,7 +195,7 @@
       "read_confidence": 0.95
     },
     {
-      "section": "1",
+      "section": null,
       "question_no": "1v",
       "max_marks": 1.0,
       "question_text": "Which of these foods is an example of carbohydrate?",
@@ -251,7 +203,7 @@
       "read_confidence": 0.95
     },
     {
-      "section": "1",
+      "section": null,
       "question_no": "1vi",
       "max_marks": 1.0,
       "question_text": "Proteins are mainly responsible for:",
@@ -343,7 +295,7 @@
       "question_no": "2a",
       "max_marks": 2.0,
       "question_text": "What are the two functions of vitamins?",
-      "student_answer": "To boost immunity and strengthen bones To heal wounds and improve eyesight",
+      "student_answer": "To boost immunity and strengthen bones. To heal wounds and improve eyesight.",
       "read_confidence": 0.9
     },
     {
@@ -351,13 +303,13 @@
       "question_no": "2b",
       "max_marks": 2.0,
       "question_text": "How can we get water into our bodies?",
-      "student_answer": "To drink water To eat fruits",
+      "student_answer": "To drink water. To eat fruits.",
       "read_confidence": 0.95
     },
     {
       "section": "B",
       "question_no": "3",
-      "max_marks": 1.0,
+      "max_marks": 5.0,
       "question_text": "Complete the story below by picking the correct words from the box to fill the blank spaces.",
       "student_answer": "bus, car, bicycle, run, boat",
       "read_confidence": 0.95
@@ -366,7 +318,7 @@
       "section": "B",
       "question_no": "4a",
       "max_marks": 1.0,
-      "question_text": "My father is a ... but he also rears animals. (farm)",
+      "question_text": "My father is a ... (farmer)",
       "student_answer": "farmer",
       "read_confidence": 0.98
     },
@@ -374,17 +326,17 @@
       "section": "B",
       "question_no": "4b",
       "max_marks": 1.0,
-      "question_text": "Our school has many... who are very kind. (teach)",
+      "question_text": "Our school has many... (teacher) who are very kind.",
       "student_answer": "teacher",
-      "read_confidence": 0.98
+      "read_confidence": 0.97
     },
     {
       "section": "B",
       "question_no": "4c",
       "max_marks": 1.0,
-      "question_text": "I shall be a wonderful... when I practice reading more. (read)",
+      "question_text": "I shall be a wonderful... (read) when I practice reading more.",
       "student_answer": "reader",
-      "read_confidence": 0.98
+      "read_confidence": 0.96
     },
     {
       "section": "B",
@@ -398,9 +350,9 @@
       "section": "B",
       "question_no": "4e",
       "max_marks": 1.0,
-      "question_text": "Cyamamare owns a large business. He is a... in town. (trade)",
+      "question_text": "Cyamamare owns a large business. He is a... (trade) in town.",
       "student_answer": "trader",
-      "read_confidence": 0.98
+      "read_confidence": 0.95
     },
     {
       "section": "B",
@@ -454,7 +406,7 @@
       "section": "C",
       "question_no": "8",
       "max_marks": 2.0,
-      "question_text": "Complete the following paragraph by using the verbs in brackets in the correct forms.\nYesterday, Anna (wake).....up early. She (eat).....breakfast and (go).....to school. After school, she (play).....with her friends and (do).....her homework. In the evening, she (watch).....TV and (call).....her grandma. Tomorrow Anna will do three things. She (help).....her mum cook dinner. She (clean).....her room and she (study).....for her test.",
+      "question_text": "Complete the following paragraph by using the verbs in brackets in the correct forms. Yesterday, Anna (wake).....up early. She (eat).....breakfast and (go).....to school. After school, she (play).....with her friends and (do).....her homework. In the evening, she (watch).....TV and (call).....her grandma. Tomorrow Anna will do three things. She (help).....her mum cook dinner. She (clean).....her room and she (study).....for her test.",
       "student_answer": "woke, ate, went, played, did, watched, called, will help, will clean, will study",
       "read_confidence": 0.9
     },
@@ -471,7 +423,7 @@
       "question_no": "9b",
       "max_marks": 1.0,
       "question_text": "He dressed smartly. He wanted to attend the party. (Join these two sentences with ...in order to...)",
-      "student_answer": "in order to",
+      "student_answer": "In order to",
       "read_confidence": 0.95
     },
     {
@@ -502,7 +454,7 @@
       "section": "C",
       "question_no": "10a",
       "max_marks": 1.0,
-      "question_text": "Use either 'must' or 'mustn't' to complete each of the following sentences.\na) You... tidy up your room.",
+      "question_text": "You... (must, mustn't) tidy up your room.",
       "student_answer": "must",
       "read_confidence": 0.95
     },
@@ -510,7 +462,7 @@
       "section": "C",
       "question_no": "10b",
       "max_marks": 1.0,
-      "question_text": "b) You... smoke.",
+      "question_text": "You... (must, mustn't) smoke.",
       "student_answer": "mustn't",
       "read_confidence": 0.95
     },
@@ -518,7 +470,7 @@
       "section": "C",
       "question_no": "10c",
       "max_marks": 1.0,
-      "question_text": "c) You... play with fire.",
+      "question_text": "You... (must, mustn't) play with fire.",
       "student_answer": "mustn't",
       "read_confidence": 0.95
     },
@@ -526,7 +478,7 @@
       "section": "C",
       "question_no": "10d",
       "max_marks": 1.0,
-      "question_text": "d) You... be at home on time.",
+      "question_text": "You... (must, mustn't) be at home on time.",
       "student_answer": "must",
       "read_confidence": 0.95
     },
@@ -534,7 +486,7 @@
       "section": "C",
       "question_no": "10e",
       "max_marks": 1.0,
-      "question_text": "e) You... cheat in a test.",
+      "question_text": "You... (must, mustn't) cheat in a test.",
       "student_answer": "mustn't",
       "read_confidence": 0.95
     },
@@ -542,7 +494,7 @@
       "section": null,
       "question_no": "11",
       "max_marks": 5.0,
-      "question_text": "Complete the paragraph below by using the following words: rich, small, beautiful, Africa, hard",
+      "question_text": "Complete the paragraph below by using the following words: rich, small, beautiful, Africa, hard.",
       "student_answer": "small, Africa, beautiful, hard, rich",
       "read_confidence": 0.95
     },
@@ -550,7 +502,7 @@
       "section": null,
       "question_no": "12",
       "max_marks": 5.0,
-      "question_text": "Correct them in the space provided. Many people love to see wld animals in their natural habitats. The laion is the king of the jungle. Erephents are very intelligent creatures that can remember things for a long time. Giraffes can reach high treas to eat leaves.",
+      "question_text": "Correct them in the space provided. Many people love to see wild animals in their natural habitats. The lion is the king of the jungle. Erephents are very intelligent creatures that can remember things for a long time. Giraffes can reach high trees to eat leaves.",
       "student_answer": "wild, animals, lion, elephant, trees",
       "read_confidence": 0.98
     },
