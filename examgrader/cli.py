@@ -7,7 +7,7 @@ from examgrader.dots_transcriber import ocr_page, transcribe_paper_hybrid
 from examgrader.grader import GuideMarkScheme, LLMJudge, grade_paper, guide_coverage
 from examgrader.llm_client import LLMClient
 from examgrader.markmap import extract_mark_map_from_text, reconcile, section_reconcile
-from examgrader.pdf_to_images import content_pages
+from examgrader.pdf_to_images import render_pdf
 from examgrader.report import write_report
 from examgrader.schemas import GradedPaper, TranscribedPaper
 
@@ -51,7 +51,10 @@ def grade_pdf(pdf_path=None, subject=None, *, out_dir=None, guide_path=None,
         vlm_client = vlm_client or _vlm_client()
         stem = os.path.splitext(os.path.basename(pdf_path))[0]
         subject = subject or stem
-        pages = content_pages(pdf_path, os.path.join(out_dir, f"{stem}_pages"))
+        # render ALL pages — do NOT pre-filter "blank" pages: sparse exam pages (big
+        # rough-work whitespace) were being wrongly dropped, losing ~half the questions.
+        # Genuinely empty pages just yield no questions from the transcriber.
+        pages = render_pdf(pdf_path, os.path.join(out_dir, f"{stem}_pages"))
         # read the stated mark distribution from the OCR'd first page
         mark_map = extract_mark_map_from_text(
             grader_client, ocr_page(ocr_client, pages[0])) if pages else {}

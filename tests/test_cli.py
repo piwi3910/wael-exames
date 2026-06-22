@@ -30,7 +30,7 @@ class _FakeText:
         t = content[0]["text"]
         if "marks distribution" in t:           # mark-map extraction
             return {"total": None, "sections": {}}
-        if "two views of ONE exam page" in t:   # hybrid structuring/merge
+        if "faithful transcription of ONE exam page" in t:   # question structuring
             return list(_QUESTIONS)
         return {"awarded_marks": 1, "justification": "ok", "grade_confidence": 1.0}  # grading
 
@@ -38,7 +38,7 @@ class _FakeText:
 def test_grade_pdf_pipeline(monkeypatch, tmp_path):
     fake_pages = [str(tmp_path / "page-01.png")]
     open(fake_pages[0], "wb").write(b"\x89PNG\r\n")
-    monkeypatch.setattr(cli, "content_pages", lambda *a, **k: fake_pages)
+    monkeypatch.setattr(cli, "render_pdf", lambda *a, **k: fake_pages)
 
     gp = cli.grade_pdf("Math paper.pdf", "Math", out_dir=str(tmp_path),
                        ocr_client=_FakeOCR(), vlm_client=_FakeVLM(), grader_client=_FakeText())
@@ -81,7 +81,7 @@ def test_grade_pdf_from_transcript_with_guide_is_deterministic(tmp_path):
 
 def test_grade_pdf_raises_on_empty_transcript(monkeypatch, tmp_path):
     page = str(tmp_path / "page-01.png"); open(page, "wb").write(b"\x89PNG\r\n")
-    monkeypatch.setattr(cli, "content_pages", lambda *a, **k: [page])
+    monkeypatch.setattr(cli, "render_pdf", lambda *a, **k: [page])
 
     class EmptyText:  # mark-map -> {}, structuring -> no questions
         def chat_json(self, content, **k):

@@ -109,52 +109,53 @@ def transcribe_paper_dots(
 
 
 # --- Hybrid: dots.ocr (printed questions + marks) + qwen3-vl (student answers) ---
+# Flow per page: dots.ocr → structure QUESTIONS+marks → ask qwen3-vl for the answers to
+# THOSE exact question numbers → attach. Anchoring the answer-reader to the structured
+# question_no values keeps answers aligned (independent numbering caused dropped answers).
 
-ANSWER_PROMPT = (
-    "Look at this scanned exam page. For EACH question the student attempted, report the "
-    "student's answer EXACTLY: for circle/select/tick questions report which option they "
-    "circled or ticked (e.g. \"B\", or the circled word); for written questions report what "
-    "they handwrote. Use an empty string for blank questions. "
-    'Return ONLY a JSON array: [{"question_no": "1a", "student_answer": "..."}].'
-)
-
-HYBRID_STRUCTURE_PROMPT = (
-    "You are given two views of ONE exam page:\n"
-    "(1) OCR_TRANSCRIPTION — faithful printed text; AUTHORITATIVE for question numbers, "
-    "question text, and the printed marks like '(N marks)'.\n"
-    "(2) STUDENT_ANSWERS — a vision model's reading of what the student wrote or circled; "
-    "AUTHORITATIVE for the student_answer (especially circled/ticked options).\n"
-    "Produce a JSON array of the real, answerable questions; each element: "
-    '"section" (letter/number or null), "question_no" (e.g. "1a"), '
-    '"max_marks" (from the OCR printed marks; if one "(N marks)" label covers sub-parts a,b,c '
+QUESTIONS_PROMPT = (
+    "Below is a faithful transcription of ONE exam page. Extract the real, answerable "
+    "questions as a JSON array; each element: "
+    '"section" (the section letter/number or null), "question_no" (e.g. "1a"), '
+    '"max_marks" (from the printed "(N marks)"; if a single label covers sub-parts a, b, c '
     "divide it evenly so they sum to N; 0 if none shown), "
-    '"question_text" (concise), '
-    '"student_answer" (from STUDENT_ANSWERS, matched by question number; empty if none), '
-    '"read_confidence" (use 1.0). '
-    "IGNORE instructions, section-overview lines, the cover/registration page and exam "
-    "metadata. Return ONLY the JSON array."
+    '"question_text" (the printed question, concise). '
+    "Do NOT include the student's answers. IGNORE instructions, section-overview lines, the "
+    "cover/registration page and exam metadata. Return ONLY the JSON array.\n\n"
+    "PAGE TRANSCRIPTION:\n"
+)
+
+ANSWERS_FOR_PROMPT = (
+    "Look at this scanned exam page. You are given the list of questions on it. For EACH "
+    "question, report the student's answer EXACTLY: the option they circled or ticked (e.g. "
+    "\"B\", or the circled word), or what they handwrote; use an empty string if blank. "
+    "Use the SAME question_no values you are given. "
+    'Return ONLY a JSON array: [{"question_no": "1a", "student_answer": "..."}].\n\n'
+    "QUESTIONS:\n"
 )
 
 
-def read_answers(vlm_client, png_path: str) -> list[dict]:
-    """Read the student's answers (incl. circled options) from the page via a vision model."""
-    r = vlm_client.chat_json([text_part(ANSWER_PROMPT), image_part(png_path)], max_tokens=2000)
-    return r if isinstance(r, list) else r.get("answers", [])
+def structure_questions(text_client, printed_text: str) -> list[dict]:
+    """Extract questions + marks (no answers) from a faithful page transcription."""
+    r = text_client.chat_json([text_part(QUESTIONS_PROMPT + printed_text)], max_tokens=2500)
+    return r if isinstance(r, list) else r.get("questions", [])
 
 
-def structure_page_hybrid(text_client, printed_text: str, answers: list,
-                          mark_map: dict | None = None) -> list[dict]:
-    prompt = (
-        HYBRID_STRUCTURE_PROMPT + mark_budget_hint(mark_map or {})
-        + "\n\nOCR_TRANSCRIPTION:\n" + printed_text
-        + "\n\nSTUDENT_ANSWERS:\n" + json.dumps(answers, ensure_ascii=False)
-    )
-    result = text_client.chat_json([text_part(prompt)], max_tokens=2500)
-    return result if isinstance(result, list) else result.get("questions", [])
+def read_answers_for(vlm_client, png_path: str, questions: list[dict]) -> dict:
+    """Ask the vision model for the answers to the GIVEN questions; returns {question_no: ans}."""
+    qlist = [{"question_no": q.get("question_no"), "question_text": q.get("question_text", "")}
+             for q in questions]
+    content = [text_part(ANSWERS_FOR_PROMPT + json.dumps(qlist, ensure_ascii=False)),
+               image_part(png_path)]
+    r = vlm_client.chat_json(content, max_tokens=2000)
+    rows = r if isinstance(r, list) else r.get("answers", [])
+    return {row.get("question_no"): row.get("student_answer", "")
+            for row in rows if isinstance(row, dict)}
 
 
-def _one_page_hybrid(ocr_client, vlm_client, text_client, png_path, mark_map):
-    """Returns (page_section, questions) — page_section is the header on this page, if any."""
+def _one_page_hybrid(ocr_client, vlm_client, text_client, png_path):
+    """Returns (page_section, questions). dots structures questions+marks; the VLM fills in
+    the answers for those exact question numbers."""
     try:
         printed = ocr_page(ocr_client, png_path)
     except Exception as e:  # noqa: BLE001 - OCR failure must not sink the paper
@@ -162,19 +163,23 @@ def _one_page_hybrid(ocr_client, vlm_client, text_client, png_path, mark_map):
         return None, []
     page_section = _detect_section(printed)
     try:
-        answers = read_answers(vlm_client, png_path)
-    except Exception as e:  # noqa: BLE001 - answers are best-effort; keep the questions
-        print(f"[hybrid] answers skipped {png_path}: {e}", file=sys.stderr)
-        answers = []
-    try:
-        raws = structure_page_hybrid(text_client, printed, answers, mark_map)
+        questions = structure_questions(text_client, printed)
     except Exception as e:  # noqa: BLE001 - structuring failure must not sink the paper
         print(f"[hybrid] structuring skipped {png_path}: {e}", file=sys.stderr)
         return page_section, []
+    if not questions:
+        return page_section, []
+    try:
+        answers = read_answers_for(vlm_client, png_path, questions)
+    except Exception as e:  # noqa: BLE001 - answers are best-effort; keep the questions
+        print(f"[hybrid] answers skipped {png_path}: {e}", file=sys.stderr)
+        answers = {}
     out: list[TranscribedQuestion] = []
-    for raw in raws:
+    for q in questions:
+        q["student_answer"] = answers.get(q.get("question_no"), "")
+        q.setdefault("read_confidence", 1.0)
         try:
-            out.append(TranscribedQuestion(**raw))
+            out.append(TranscribedQuestion(**q))
         except Exception as e:  # noqa: BLE001 - one bad question must not drop the page
             print(f"[hybrid] question skipped on {png_path}: {e}", file=sys.stderr)
     return page_section, out
@@ -186,7 +191,7 @@ def transcribe_paper_hybrid(
 ) -> TranscribedPaper:
     workers = SETTINGS.vlm_concurrency if max_workers is None else max_workers
     per_page = map_ordered(
-        lambda p: _one_page_hybrid(ocr_client, vlm_client, text_client, p, mark_map),
+        lambda p: _one_page_hybrid(ocr_client, vlm_client, text_client, p),
         list(png_paths), workers,
     )
     questions = _dedupe_question_nos(_carry_sections_forward(per_page, mark_map))
