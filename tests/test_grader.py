@@ -19,11 +19,23 @@ def test_llmjudge_maps_and_clamps(fake_client_factory):
 
 
 def test_llmjudge_flags_low_read_confidence(fake_client_factory):
+    # non-empty handwriting but low confidence -> human should check the OCR
     client = fake_client_factory([
         {"awarded_marks": 1, "justification": "ok", "grade_confidence": 0.8},
     ])
     g = grader.LLMJudge(client).grade_question(_q("2a", 1, "Principal", conf=0.3))
     assert "low_read_confidence" in g.flags
+    assert "blank_answer" not in g.flags
+
+
+def test_llmjudge_blank_answer_flagged_blank_not_low_confidence(fake_client_factory):
+    # an unanswered question (empty, conf 0.0) is a legitimate zero, not an OCR failure
+    client = fake_client_factory([
+        {"awarded_marks": 0, "justification": "no answer", "grade_confidence": 1.0},
+    ])
+    g = grader.LLMJudge(client).grade_question(_q("1a", 5, "", conf=0.0))
+    assert g.flags == ["blank_answer"]
+    assert "low_read_confidence" not in g.flags
 
 
 def test_llmjudge_handles_call_failure():

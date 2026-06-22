@@ -2,6 +2,9 @@ import os
 
 from examgrader.schemas import GradedPaper
 
+# flags that warrant a human's attention (⚠); blank answers are expected, not review-worthy
+REVIEW_FLAGS = {"low_read_confidence", "grading_failed"}
+
 
 def to_json(paper: GradedPaper) -> str:
     return paper.model_dump_json(indent=2)
@@ -17,7 +20,7 @@ def to_markdown(paper: GradedPaper) -> str:
         "|---|---------|-------|------|-------|---------------|",
     ]
     for q in paper.questions:
-        warn = "⚠ " if q.flags else ""
+        warn = "⚠ " if REVIEW_FLAGS.intersection(q.flags) else ""
         flags = ", ".join(q.flags) if q.flags else ""
         just = q.justification.replace("|", "\\|")
         lines.append(

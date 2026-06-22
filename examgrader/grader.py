@@ -28,7 +28,11 @@ class LLMJudge:
 
     def grade_question(self, q: TranscribedQuestion) -> GradedQuestion:
         flags: list[str] = []
-        if q.read_confidence < 0.5:
+        if not q.student_answer.strip():
+            # a blank answer is a legitimate zero, not an OCR problem
+            flags.append("blank_answer")
+        elif q.read_confidence < 0.5:
+            # handwriting was present but hard to read — worth a human check
             flags.append("low_read_confidence")
         prompt = (
             f"{JUDGE_PROMPT}\n\n"
