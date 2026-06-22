@@ -15,15 +15,24 @@ Both are **scanned, completed** papers: printed questions with **handwritten stu
 answers** on noisy, low-contrast scans. Success bar for the POC is correct end-to-end
 grading of these two specific papers (depth over breadth). One student per paper.
 
-## Environment (verified 2026-06-22)
+## Environment (verified working 2026-06-22)
 
-DGX Spark, vLLM, OpenAI-compatible endpoints:
+DGX Spark (`piwi@gx10-48f4`, 192.168.10.246, GB10, 121 GB unified mem), vLLM
+`0.20.2`, OpenAI-compatible endpoints:
 
-- `http://192.168.10.246:8888/v1` → `qwen3.6-35b` (Qwen3.6-35B-A3B, **text-only**, 262k ctx)
-- `http://192.168.10.246:8890/v1` → `bge-m3` (embeddings; not needed for POC)
+- `http://192.168.10.246:8888/v1` → `qwen3.6-35b` (reasoner; **grader**) — relaunched
+  at `--gpu-memory-utilization 0.6` (was 0.8) to free memory.
+- `http://192.168.10.246:8003/v1` → `qwen3-vl` (`QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ`;
+  **transcriber**) — newly added, `--gpu-memory-utilization 0.28 --max-model-len 40960`.
+- `http://192.168.10.246:8890/v1` → `bge-m3` embeddings — **currently stopped** (freed
+  memory; restart if NovaMem needs it — qwen@0.6 leaves room for all models together).
 
-**Gap:** no vision model is currently served. The inputs are images, so a vision model
-must be added (see Vision Model below).
+**Vision path proven end-to-end:** a scanned Math page (printed questions + handwritten
+answers) was transcribed by `qwen3-vl` with 100% accuracy at ~3,600 prompt tokens/page.
+
+Memory after changes: ~78 GB used / ~43 GB available. Rollback container for the grader
+is kept as `vllm-node-bak-util08`. Launch scripts on the box: `~/relaunch-qwen.sh`,
+`~/launch-qwen3-vl.sh`.
 
 ## Architecture
 
@@ -85,17 +94,14 @@ Each component has one purpose, a typed interface, and is independently testable
 Typed Pydantic schemas define every cross-stage object (`PageImage`, `TranscribedQuestion`,
 `TranscribedPaper`, `GradedQuestion`, `GradedPaper`).
 
-## Vision Model (new dependency)
+## Vision Model (DONE — serving and verified)
 
-- **Recommended:** `Qwen2.5-VL-32B-Instruct` (AWQ/FP8) served via vLLM on a **new port
-  (8889)** using the existing Spark Arena image — strong document + handwriting OCR and
-  structured extraction.
-- **Fallback:** `Qwen2.5-VL-7B-Instruct` if VRAM is tight alongside the 262k-context
-  `qwen3.6-35b`.
-- **First setup step:** verify VRAM coexistence on the DGX. Because transcripts are
-  persisted, an acceptable fallback is to transcribe all pages first, then bring the judge
-  up — the two models never strictly need to be co-resident.
-- The exact serve command is produced during implementation setup.
+- **Serving:** `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` (MoE, A3B active) as `qwen3-vl`
+  on port 8003. Chosen because it is the toolkit's documented VLM example and is a strong
+  document/handwriting OCR model that fits the freed headroom.
+- VRAM was reclaimed by relaunching `qwen3.6-35b` at util 0.6 and stopping the embed +
+  rerank containers. Both target models now run co-resident.
+- Verified: accurate transcription of handwritten answers on a real scan page.
 
 ## Data Flow & Schemas (interfaces)
 
