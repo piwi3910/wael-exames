@@ -15,6 +15,7 @@ def test_render_pdf_produces_pngs(tmp_path):
 
 
 def test_content_pages_drops_blanks(tmp_path):
-    all_pages = pdf_to_images.render_pdf(MATH, str(tmp_path), dpi=120)
-    content = pdf_to_images.content_pages(MATH, str(tmp_path), dpi=120)
-    assert 0 < len(content) <= len(all_pages)
+    all_pages = pdf_to_images.render_pdf(MATH, str(tmp_path / "all"), dpi=120)
+    content = pdf_to_images.content_pages(MATH, str(tmp_path / "content"), dpi=120)
+    assert len(content) >= 1
+    assert len(content) < len(all_pages)  # at least one blank page dropped
