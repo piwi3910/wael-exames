@@ -17,6 +17,19 @@ def test_text_part_shape():
     assert text_part("hi") == {"type": "text", "text": "hi"}
 
 
+def test_image_part_builds_data_url(tmp_path):
+    from examgrader.llm_client import image_part
+    p = tmp_path / "x.png"
+    p.write_bytes(b"\x89PNG\r\n\x1a\nABC")
+    part = image_part(str(p))
+    assert part["type"] == "image_url"
+    assert part["image_url"]["url"].startswith("data:image/png;base64,")
+    # round-trips to the original bytes
+    import base64
+    b64 = part["image_url"]["url"].split(",", 1)[1]
+    assert base64.b64decode(b64) == b"\x89PNG\r\n\x1a\nABC"
+
+
 def test_chat_json_parses_reply(monkeypatch):
     captured = {}
 

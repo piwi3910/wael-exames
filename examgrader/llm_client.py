@@ -43,7 +43,8 @@ def text_part(text: str) -> dict:
 
 
 def image_part(png_path: str) -> dict:
-    data = base64.b64encode(open(png_path, "rb").read()).decode()
+    with open(png_path, "rb") as f:
+        data = base64.b64encode(f.read()).decode()
     return {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{data}"}}
 
 
