@@ -10,3 +10,4 @@ venv/
 # Pipeline artifacts
 out/
 *.png
+*.egg-info/
