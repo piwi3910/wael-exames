@@ -31,6 +31,22 @@ def test_to_markdown_has_header_and_flag():
     assert "⚠" in md  # flagged question marked
 
 
+def test_blank_answer_flag_not_marked_review():
+    # a blank_answer flag is informational and must NOT get the ⚠ review marker
+    paper = GradedPaper(
+        subject="English", source_pdf="e.pdf",
+        questions=[
+            GradedQuestion(question_no="1a", section="A", max_marks=2, awarded_marks=0,
+                           student_answer="", justification="no answer", grade_confidence=1.0,
+                           flags=["blank_answer"]),
+        ],
+        section_totals={"A": 0.0}, total=0.0, max_total=100.0,
+    )
+    md = report.to_markdown(paper)
+    assert "blank_answer" in md      # the flag is still shown in the table
+    assert "⚠" not in md             # but it does not trigger the review marker
+
+
 def test_write_report_creates_files(tmp_path):
     j, m = report.write_report(_paper(), str(tmp_path))
     assert j.endswith("Math paper.results.json")

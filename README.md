@@ -87,14 +87,28 @@ healthy before a live run.
 - English paper: 94.5/100.
 - SET paper: not yet run — it is the third sample and a good first test of this guide.
 
+## Performance
+
+Transcription and grading both run their model calls concurrently (thread pool;
+`vlm_concurrency` and `grader_concurrency` in `config.py`). Grader calls parallelize ~3.4×;
+the vision model is GPU-bound on the single GB10 and scales ~2×, so transcription is the
+dominant cost (~6 s/page). A full paper runs in roughly 75 s–2 min depending on page count.
+Lowering `render_dpi` (200→150) is the cheapest further speedup if OCR accuracy holds.
+
+## Flags in the report
+
+- `blank_answer` — the student left it blank (a legitimate 0; informational only).
+- `low_read_confidence` — handwriting was present but hard to read; **gets a ⚠** — check the
+  scan against the transcript.
+- `grading_failed` — the grader call errored for that question (scored 0); **gets a ⚠**.
+
+The ⚠ marker fires only on review-worthy flags, not on blank answers.
+
 ## Known limitations (POC)
 
-- **Section-header noise (English):** the vision model sometimes transcribes the
-  section-overview lines ("Section A: Comprehension (20 marks)") as empty pseudo-questions.
-  They score 0 and are flagged `low_read_confidence`, so they don't inflate the score, but
-  they add noise to the report. Tightening `TRANSCRIBE_PROMPT` to ignore instruction/summary
-  lines is the obvious follow-up.
 - **`max_total` is fixed at 100** rather than derived from the transcribed questions.
+- The vision model scales only ~2× concurrently (memory-bound at its current util); more
+  speed needs lower DPI or more VRAM headroom for batching.
 - LLM-judge grading is best-effort; production should use the official marking guide via a
   `MarkScheme` implementation.
 
