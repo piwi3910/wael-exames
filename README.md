@@ -4,24 +4,77 @@ Grades scanned NESA exam PDFs on the DGX Spark using a two-stage local-LLM pipel
 `pdftoppm` render → `qwen3-vl` (handwriting transcription, port 8003) →
 `qwen3.6-35b` (grading, port 8888) → JSON + Markdown report.
 
-## Run
+The three sample papers in this folder are `English paper.pdf`, `Math paper.pdf`, and
+`SET paper.pdf`.
 
-    uv run python grade.py "Math paper.pdf" --subject Math --out out
+---
 
-Outputs `out/<stem>.transcript.json`, `out/<stem>.results.json`, `out/<stem>.report.md`.
+## Testing it against the 3 PDFs
 
-## Test
+### 0. Prerequisites (one-time)
+
+- **Local tools:** `uv` (Python 3.12 manager), plus `pdftoppm` (poppler) and `magick`
+  (ImageMagick). On macOS: `brew install uv poppler imagemagick`.
+- **Install deps:** from the repo root, `uv sync` (creates the 3.12 venv and installs
+  pydantic/httpx/pytest from `uv.lock`).
+- **DGX models must be up.** Both endpoints in `examgrader/config.py` must answer `200`:
+
+      curl -s -o /dev/null -w "vlm:%{http_code}\n"    http://192.168.10.246:8003/v1/models
+      curl -s -o /dev/null -w "grader:%{http_code}\n" http://192.168.10.246:8888/v1/models
+
+  If either is not `200`, the vision/grader container is stopped — restart on the DGX
+  (`ssh dgx-spark`, then `~/launch-qwen3-vl.sh` for the vision model; see the design spec
+  for the grader). Each paper takes ~2 minutes to grade.
+
+### 1. Grade all three at once
+
+    ./grade_all.sh
+
+This runs each paper and writes results under `out/`. (It just loops the single-paper
+command below.)
+
+### 2. Or grade one paper at a time
+
+    uv run python grade.py "Math paper.pdf"    --subject Math
+    uv run python grade.py "English paper.pdf" --subject English
+    uv run python grade.py "SET paper.pdf"     --subject SET
+
+`--subject` is optional (defaults to the file name); `--out DIR` changes the output folder
+(default `out`).
+
+### 3. Read the results
+
+For each paper, three files appear in `out/`:
+
+| File | What it is |
+|------|-----------|
+| `<paper>.report.md` | Human-readable: per-question marks, justification, ⚠ flags, total |
+| `<paper>.results.json` | Same data as structured JSON (for downstream tooling) |
+| `<paper>.transcript.json` | What the vision model *read* off each page (check OCR accuracy here) |
+
+Quick look:
+
+    cat "out/Math paper.report.md"
+
+To sanity-check the handwriting reading, open the `*.transcript.json` and compare a few
+answers against the scan — that isolates "did it read the page right" from "did it grade
+right."
+
+### 4. Run the unit tests (no DGX needed)
 
     uv run pytest
 
-Unit tests mock the LLM calls; no DGX needed. The live run hits the DGX endpoints in
-`examgrader/config.py`.
+All LLM calls are mocked, so this runs offline and fast. Use it to confirm the code is
+healthy before a live run.
+
+---
 
 ## How it works
 
 1. `examgrader/pdf_to_images.py` — `pdftoppm` renders pages; near-blank scans are dropped.
 2. `examgrader/transcriber.py` — sends each page to the vision model, which returns
-   structured `{question, max_marks, student_answer, read_confidence}` records.
+   structured `{question, max_marks, student_answer, read_confidence}` records. A single
+   unreadable page or question is skipped, never the whole paper.
 3. `examgrader/grader.py` — the `MarkScheme` interface grades each question. The POC uses
    `LLMJudge` (the reasoning model decides correctness). Production swaps in a
    marking-guide implementation without touching the reading stage.
@@ -29,9 +82,10 @@ Unit tests mock the LLM calls; no DGX needed. The live run hits the DGX endpoint
 
 ## Verified results (2026-06-22)
 
-- Math paper: 68/100. Transcription of the objective section matched ground truth exactly
+- Math paper: 68/100. Objective-section transcription matched ground truth exactly
   (Q1 a–e, Q2, Q3a).
 - English paper: 94.5/100.
+- SET paper: not yet run — it is the third sample and a good first test of this guide.
 
 ## Known limitations (POC)
 
