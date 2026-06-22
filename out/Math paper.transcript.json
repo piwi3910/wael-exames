@@ -24,7 +24,7 @@
       "max_marks": 1.0,
       "question_text": "(-2) × (-3) = +6",
       "student_answer": "True",
-      "read_confidence": 0.98
+      "read_confidence": 0.97
     },
     {
       "section": null,
@@ -32,7 +32,7 @@
       "max_marks": 1.0,
       "question_text": "(-3) - (-2) = -5",
       "student_answer": "False",
-      "read_confidence": 0.97
+      "read_confidence": 0.96
     },
     {
       "section": null,
@@ -46,7 +46,7 @@
       "section": null,
       "question_no": "2a",
       "max_marks": 1.0,
-      "question_text": "The money borrowed, saved or lent is ......",
+      "question_text": "The money borrowed, saved or lent is ....",
       "student_answer": "Principal",
       "read_confidence": 0.95
     },
@@ -54,25 +54,25 @@
       "section": null,
       "question_no": "2b",
       "max_marks": 1.0,
-      "question_text": "The percentage used to calculate interest is ......",
+      "question_text": "The percentage used to calculate interest is ....",
       "student_answer": "Rate",
-      "read_confidence": 0.96
+      "read_confidence": 0.97
     },
     {
       "section": null,
       "question_no": "2c",
       "max_marks": 1.0,
-      "question_text": "...... is the period that the borrowed money is invested.",
+      "question_text": ".... is the period that the borrowed money is invested.",
       "student_answer": "Time",
-      "read_confidence": 0.94
+      "read_confidence": 0.96
     },
     {
       "section": null,
       "question_no": "3a",
       "max_marks": 2.0,
-      "question_text": "The distance around the circle is ......",
+      "question_text": "The distance around the circle is ....",
       "student_answer": "Circumference",
-      "read_confidence": 0.97
+      "read_confidence": 0.98
     },
     {
       "section": null,
@@ -87,7 +87,7 @@
       "question_no": "4",
       "max_marks": 2.0,
       "question_text": "A meeting started at 10:40 a.m. and ended at 1:30 p.m. The duration of this meeting is ... h. ... min.",
-      "student_answer": "2 h. 50 min.",
+      "student_answer": "2. 50min.",
       "read_confidence": 0.98
     },
     {
@@ -95,7 +95,7 @@
       "question_no": "5a",
       "max_marks": 2.0,
       "question_text": "What are the place values of 2 and 7 in the number 3,297,354?",
-      "student_answer": "2 = hundreds thousands\n7 = thousands",
+      "student_answer": "2 = hundred thousands\n7 = thousands",
       "read_confidence": 0.97
     },
     {
@@ -110,7 +110,7 @@
       "section": null,
       "question_no": "6a",
       "max_marks": 1.0,
-      "question_text": "Compare the numbers using <, > or =\n537,926 ... 573,926",
+      "question_text": "Compare the numbers using <, > or =: 537,926 ... 573,926",
       "student_answer": "<",
       "read_confidence": 0.99
     },
@@ -118,7 +118,7 @@
       "section": null,
       "question_no": "6b",
       "max_marks": 1.0,
-      "question_text": "Compare the numbers using <, > or =\n10^6 ... 1,000,000",
+      "question_text": "Compare the numbers using <, > or =: 10^6 ... 1,000,000",
       "student_answer": ">",
       "read_confidence": 0.99
     },
@@ -126,7 +126,7 @@
       "section": null,
       "question_no": "6c",
       "max_marks": 1.0,
-      "question_text": "Compare the numbers using <, > or =\n210,034 ... 201,034",
+      "question_text": "Compare the numbers using <, > or =: 210,034 ... 201,034",
       "student_answer": ">",
       "read_confidence": 0.99
     },
@@ -135,7 +135,7 @@
       "question_no": "7",
       "max_marks": 2.0,
       "question_text": "By using the following digits: 5; 2; 9; 4; 0; Write the biggest and the smallest whole number formed by all five digits.",
-      "student_answer": "Biggest: 95420\nSmallest: 20459",
+      "student_answer": "Biggest: 95420\nSmallest: 02459",
       "read_confidence": 0.95
     },
     {
@@ -255,7 +255,7 @@
       "question_no": "34a",
       "max_marks": 2.0,
       "question_text": "Order the family needs according to priority.",
-      "student_answer": "a). buying food - buying clothes - paying school fees - painting house",
+      "student_answer": "buying food - buying clothes - paying school fees - painting house",
       "read_confidence": 0.95
     },
     {
@@ -283,15 +283,15 @@
       "read_confidence": 0.96
     },
     {
-      "section": null,
+      "section": "35",
       "question_no": "35a",
-      "max_marks": 1.0,
+      "max_marks": 3.0,
       "question_text": "Complete this frequency table.",
-      "student_answer": "95, 2, 190; 90, 3, 270; 85, 3, 680; 80, 8, 80; 75, 1, 450; 70, 6, 210; 60, 2, 120; Σf = 25; Σfx = 2000",
+      "student_answer": "95, 2, 190\n90, 3, 270\n85, 3, 680\n80, 8, 80\n75, 1, 450\n70, 6, 210\n60, 2, 120\nΣf = 25\nΣfx = 2000",
       "read_confidence": 0.95
     },
     {
-      "section": null,
+      "section": "35",
       "question_no": "35b",
       "max_marks": 1.0,
       "question_text": "Modal mark is",
@@ -299,7 +299,7 @@
       "read_confidence": 0.98
     },
     {
-      "section": null,
+      "section": "35",
       "question_no": "35c",
       "max_marks": 1.0,
       "question_text": "The mean is",
