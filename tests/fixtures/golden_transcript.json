@@ -1,0 +1,10 @@
+{
+  "subject": "Math",
+  "source_pdf": "Math paper.pdf",
+  "questions": [
+    {"section": "1", "question_no": "1a", "max_marks": 1, "question_text": "(-3) x (-2) = -6", "student_answer": "False", "read_confidence": 0.95},
+    {"section": "1", "question_no": "1b", "max_marks": 1, "question_text": "(-2) + (-3) = -5", "student_answer": "True", "read_confidence": 0.95},
+    {"section": "2", "question_no": "2a", "max_marks": 1, "question_text": "The money borrowed, saved or lent is ___", "student_answer": "Principal", "read_confidence": 0.9},
+    {"section": "3", "question_no": "3a", "max_marks": 2, "question_text": "The distance around the circle is ___", "student_answer": "Circumference", "read_confidence": 0.9}
+  ]
+}
