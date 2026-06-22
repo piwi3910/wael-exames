@@ -27,3 +27,16 @@ def test_transcribe_paper_skips_failing_page(fake_client_factory, golden_transcr
 
     tp = transcriber.transcribe_paper(Flaky(), [str(p1), str(p2)], "Math", "Math paper.pdf")
     assert len(tp.questions) == 4  # page 1 skipped, page 2 parsed
+
+
+def test_transcribe_paper_skips_bad_question_keeps_good(fake_client_factory, tmp_path):
+    p = tmp_path / "page-01.png"; p.write_bytes(b"\x89PNG\r\n")
+    # second dict is malformed (read_confidence out of range) -> must be skipped, others kept
+    page = [
+        {"section": "A", "question_no": "1a", "max_marks": 1, "question_text": "q", "student_answer": "x", "read_confidence": 0.9},
+        {"section": "A", "question_no": "1b", "max_marks": 1, "question_text": "q", "student_answer": "y", "read_confidence": 5.0},
+        {"section": "A", "question_no": "1c", "max_marks": 1, "question_text": "q", "student_answer": "z", "read_confidence": 0.8},
+    ]
+    client = fake_client_factory([page])
+    tp = transcriber.transcribe_paper(client, [str(p)], "Math", "Math paper.pdf")
+    assert [q.question_no for q in tp.questions] == ["1a", "1c"]

@@ -27,8 +27,13 @@ def transcribe_paper(client, png_paths, subject: str, source_pdf: str) -> Transc
     questions: list[TranscribedQuestion] = []
     for path in png_paths:
         try:
-            for raw in transcribe_page(client, path):
+            raws = transcribe_page(client, path)
+        except Exception as e:  # noqa: BLE001 - a page-level failure must not sink the paper
+            print(f"[transcriber] skipped page {path}: {e}", file=sys.stderr)
+            continue
+        for raw in raws:
+            try:
                 questions.append(TranscribedQuestion(**raw))
-        except Exception as e:  # noqa: BLE001 - one bad page must not sink the paper
-            print(f"[transcriber] skipped {path}: {e}", file=sys.stderr)
+            except Exception as e:  # noqa: BLE001 - a single bad question must not drop the page
+                print(f"[transcriber] skipped question on {path}: {e}", file=sys.stderr)
     return TranscribedPaper(subject=subject, source_pdf=source_pdf, questions=questions)
