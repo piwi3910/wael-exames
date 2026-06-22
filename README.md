@@ -13,8 +13,8 @@ flowchart LR
     rep --> out[("results.json<br/>report.md<br/>transcript.json")]
 ```
 
-The three sample papers in this folder are `English paper.pdf`, `Math paper.pdf`, and
-`SET paper.pdf`. Full design with more diagrams: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+Inputs live in `in/` (`English paper.pdf`, `Math paper.pdf`, `SET paper.pdf`); grades are
+written to `out/`. Full design with more diagrams: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ---
 
@@ -44,9 +44,9 @@ command below.)
 
 ### 2. Or grade one paper at a time
 
-    uv run python grade.py "Math paper.pdf"    --subject Math
-    uv run python grade.py "English paper.pdf" --subject English
-    uv run python grade.py "SET paper.pdf"     --subject SET
+    uv run python grade.py "in/Math paper.pdf"    --subject Math
+    uv run python grade.py "in/English paper.pdf" --subject English
+    uv run python grade.py "in/SET paper.pdf"     --subject SET
 
 `--subject` is optional (defaults to the file name); `--out DIR` changes the output folder
 (default `out`).
@@ -89,12 +89,23 @@ healthy before a live run.
    marking-guide implementation without touching the reading stage.
 4. `examgrader/report.py` — writes the per-question JSON + a readable Markdown report.
 
-## Verified results (2026-06-22)
+## Results (all three graded, regenerated 2026-06-22)
 
-- Math paper: 68/100. Objective-section transcription matched ground truth exactly
-  (Q1 a–e, Q2, Q3a).
-- English paper: 94.5/100.
-- SET paper: not yet run — it is the third sample and a good first test of this guide.
+The committed grades under `out/` are from this run:
+
+| Paper | Total | Questions | Blank | Need review | Σ max_marks |
+|-------|-------|-----------|-------|-------------|-------------|
+| Math    | 68/100  | 38 | 0  | 0 | 88  |
+| English | **119/100** | 75 | 30 | 0 | 170 |
+| SET     | 66/100  | 57 | 1  | 0 | 114 |
+
+**Caveat — totals can exceed 100.** English came out 119/100 because the transcriber
+over-attributes marks: for multi-part questions it tags each sub-part with the parent's
+"(N marks)" label, so the per-question `max_marks` sum to 170 on a /100 paper. Math (Σ=88)
+and SET (Σ=114) show the same effect to a lesser degree. The objective Math transcription
+still matched ground truth exactly (Q1 a–e, Q2, Q3a). Treat these numbers as a pipeline
+demonstration, not final marks — see Known limitations. Scores also vary run-to-run because
+the POC uses an LLM as judge.
 
 ## Performance
 
@@ -115,7 +126,12 @@ The ⚠ marker fires only on review-worthy flags, not on blank answers.
 
 ## Known limitations (POC)
 
-- **`max_total` is fixed at 100** rather than derived from the transcribed questions.
+- **Mark over-attribution → totals can exceed 100.** The transcriber assigns the printed
+  "(N marks)" of a multi-part question to *each* sub-part, so `max_marks` (and thus the
+  awarded total) inflate past the paper's real maximum (English Σ=170 on /100). Fixing this
+  needs the transcriber to attribute marks once per mark-bearing unit, and `max_total` to be
+  derived from the paper rather than hardcoded to 100.
+- LLM-judge scores vary between runs; not yet deterministic.
 - The vision model scales only ~2× concurrently (memory-bound at its current util); more
   speed needs lower DPI or more VRAM headroom for batching.
 - LLM-judge grading is best-effort; production should use the official marking guide via a
@@ -123,7 +139,9 @@ The ⚠ marker fires only on review-worthy flags, not on blank answers.
 
 ## Notes
 
+- Inputs are in `in/`, grades in `out/` — both committed to this repo, including the raw
+  rendered page scans (`out/*_pages/`). ⚠️ These scans and the source PDFs contain pupils'
+  names; this repo is public, so that personal data is committed publicly by request.
 - Endpoints, model names, and render DPI live in `examgrader/config.py`.
-- Student PDFs and rendered pages are gitignored (they contain minors' names).
 - DGX serving details (the `qwen3-vl` container, memory tuning) are in
   `docs/superpowers/specs/2026-06-22-exam-grading-framework-design.md`.

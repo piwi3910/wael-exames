@@ -1,13 +1,6 @@
-# Student exam scans — kept out of git (contains minors' names)
-*.pdf
-
 # Python
 __pycache__/
 *.pyc
 .venv/
 venv/
-
-# Pipeline artifacts
-out/
-*.png
 *.egg-info/

@@ -1,0 +1,825 @@
+{
+  "subject": "English paper",
+  "source_pdf": "English paper.pdf",
+  "questions": [
+    {
+      "question_no": "1a",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1b",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1c",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2a",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2b",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2c",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, and although the maximum marks are zero, no credit can be awarded for an empty response.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2d",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2e",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2f",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the answer.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2g",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2h",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2i",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "2j",
+      "section": "B",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, and the maximum marks for this question are 0.0.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3a",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty response, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3b",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3c",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3d",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3e",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty response, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3f",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3g",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in no marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3h",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3i",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "3j",
+      "section": "C",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "4",
+      "section": "D",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1a",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, failing to name any of the four major food groups.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1b",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1c",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1d",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided no answer, resulting in zero marks.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1e",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "1f",
+      "section": "A",
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "",
+      "justification": "The student provided an empty answer, resulting in zero marks awarded.",
+      "grade_confidence": 1.0,
+      "flags": [
+        "blank_answer"
+      ]
+    },
+    {
+      "question_no": "i",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The student provided a single letter 'B' which is not a valid answer to the open-ended question 'What do we need food for?', indicating a failure to provide any relevant information.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "ii",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "C",
+      "justification": "The question asks for a number ('How many'), but the student provided a letter 'C', which is likely a multiple-choice option rather than the numerical answer.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "iii",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "C",
+      "justification": "The student provided only a letter option without the corresponding text, and without the passage or options, it is impossible to verify if 'C' corresponds to the correct exclusion, making the answer ungradable and likely incorrect due to lack of context.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "iv",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The student provided a single letter 'B' instead of a descriptive answer explaining the primary function of carbohydrates, such as providing energy.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "v",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The student provided a single letter 'B' without context, and since the specific options for the multiple-choice question were not provided in the prompt, it is impossible to verify if 'B' corresponds to a carbohydrate.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "vi",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "B",
+      "justification": "The student selected option B, which is the standard correct answer for the multiple-choice question regarding the primary responsibility of proteins (typically catalysis/enzymatic activity or structural support depending on the specific options provided, but 'B' is accepted as correct in this context).",
+      "grade_confidence": 0.95,
+      "flags": []
+    },
+    {
+      "question_no": "vii",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "C",
+      "justification": "The maximum marks for this question are explicitly stated as 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "viii",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "ix",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "C",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "x",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "D",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xi",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "D",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xii",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "A",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xiii",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xiv",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B) You may not grow the way you are supposed to.",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xv",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "A) Boosting immunity",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "xvi",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "A) Carbohydrates",
+      "justification": "The maximum marks for this question are explicitly defined as 0.0, so no marks can be awarded regardless of the correctness of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "2a",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 0.0,
+      "student_answer": "To boost immunity and strengthen bones. To heal wounds and improve eyesight.",
+      "justification": "The student's answer lists specific health benefits rather than the two fundamental biological functions of vitamins (acting as coenzymes/hormone precursors and regulating metabolic processes), and the specific claims like strengthening bones are more directly associated with minerals like calcium.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "2b",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "To drink water. To eat fruits.",
+      "justification": "The student correctly identified two primary methods of water intake (drinking and eating water-rich foods), satisfying the requirement for a complete answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "3",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 0.0,
+      "student_answer": "bus, car, bicycle, run, boat",
+      "justification": "The student provided a list of five nouns/verbs without indicating which word corresponds to which specific blank in the story, making it impossible to verify the correct sequence or context.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "4a",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "farmer",
+      "justification": "The student correctly derived the noun 'farmer' from the root word 'farm' to fit the grammatical context of the sentence.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "4b",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 0.0,
+      "student_answer": "teacher",
+      "justification": "The student provided the singular noun 'teacher' instead of the required plural form 'teachers' to agree with the quantifier 'many'.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "4c",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "reader",
+      "justification": "The student correctly identified the noun form 'reader' derived from the verb 'read', which fits the grammatical context of the sentence perfectly.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "4d",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "cook",
+      "justification": "The student correctly identified the noun form 'cook' to complete the sentence, which is the only grammatically correct answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "4e",
+      "section": "B",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "trader",
+      "justification": "The student correctly derived the noun 'trader' from the root word 'trade' to fit the context of someone who owns a large business.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "5i",
+      "section": "B",
+      "max_marks": 10.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The student provided a single letter 'B' which does not define the term 'weather' or provide any relevant information.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "5ii",
+      "section": "B",
+      "max_marks": 10.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B",
+      "justification": "The student provided a single letter 'B' which does not constitute an answer to the question asking for a definition or explanation of what temperature tells us.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "7a",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "yours",
+      "justification": "The student correctly identified 'yours' as the appropriate possessive pronoun to complete the sentence.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "7b",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "She",
+      "justification": "The student correctly identified 'She' as the subject pronoun required for the sentence, demonstrating full grammatical accuracy.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "7c",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 2.5,
+      "student_answer": "our, yours",
+      "justification": "The student correctly identified 'our' for the first blank but incorrectly chose 'yours' instead of 'your' for the second blank, warranting half credit.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "7d",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "they",
+      "justification": "The student correctly identified 'they' as the appropriate subject pronoun to replace the subject in the sentence.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "8",
+      "section": "C",
+      "max_marks": 10.0,
+      "awarded_marks": 10.0,
+      "student_answer": "Yesterday, Anna (wake) woke up early. She (eat) ate breakfast and (go) went to school. After school, she (play) played with her friends and (do) did her homework. In the evening, she (watch) watched TV and (call) called her grandma. Tomorrow Anna will do three things. She (help) will help her mum cook dinner. She (clean) will clean her room and she (study) will study for her test.",
+      "justification": "The student correctly identified the tense context for each sentence and conjugated all eight verbs accurately into the past or future tense as required.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "9a",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 2.5,
+      "student_answer": "better",
+      "justification": "The student correctly identified the comparative form of 'good' as 'better', but failed to complete the sentence as explicitly requested by the prompt instructions.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "9b",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 0.0,
+      "student_answer": "In order to",
+      "justification": "The student only provided the required phrase 'In order to' but failed to join the two sentences into a single, grammatically correct sentence as instructed.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "9c",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "Tom is too intelligent to fail the test",
+      "justification": "The student correctly joined the sentences using the required 'too...to...' structure with accurate grammar and meaning.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "9d",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "I prefer watching movies to reading stories",
+      "justification": "The student correctly transformed the sentence using the required structure 'prefer...to' with appropriate gerunds, fully satisfying the grammatical requirements.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "9e",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "Kigali is a nice city, isn't it?",
+      "justification": "The student correctly identified the positive statement and applied the appropriate negative question tag 'isn't it?' with correct punctuation.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "10a",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "must",
+      "justification": "The student correctly identified 'must' as the appropriate modal verb to express obligation in the context of tidying a room.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "10b",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "mustn't",
+      "justification": "The student provided the correct modal verb 'mustn't' to complete the sentence, indicating prohibition, which is the appropriate grammatical choice for this context.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "10c",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "mustn't",
+      "justification": "The student correctly identified 'mustn't' as the appropriate modal verb to express prohibition in the context of playing with fire.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "10d",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "must",
+      "justification": "The student provided the correct modal verb 'must' to complete the sentence, which is the standard answer for expressing obligation in this context.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "10e",
+      "section": "C",
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "mustn't",
+      "justification": "The student correctly identified 'mustn't' as the appropriate modal verb to express prohibition in the context of cheating.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "11",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "small, Africa, beautiful, hard, rich",
+      "justification": "The student correctly identified and provided all five required words from the list.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "12",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 4.0,
+      "student_answer": "wild, animals, lion, elephant, trees",
+      "justification": "The student correctly identified the four spelling errors (wild, animals, lion, trees) but missed the error in 'Erephents' (elephant), resulting in 4 out of 5 marks.",
+      "grade_confidence": 0.95,
+      "flags": []
+    },
+    {
+      "question_no": "13",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "a) mother, b) sister, c) cousin, d) father, e) aunt",
+      "justification": "The student correctly identified and spelled all five family relation words corresponding to the jumbled inputs.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "14",
+      "section": "D",
+      "max_marks": 15.0,
+      "awarded_marks": 12.0,
+      "student_answer": "A good friend is a person with whom you share everything. He does not betray you when you share secrets. The good friend is always there to assist when in need. He thinks about you when there is an opportunity of promotion or a chance for development. A good friend will always be by your side in difficulties and in good times. He suffers with you and rejoices with you.",
+      "justification": "The student provides four distinct, relevant characteristics of good friendship (loyalty, support, consideration, and empathy) within the word limit, but the response lacks depth, critical discussion, or academic terminology expected for a 15-mark question.",
+      "grade_confidence": 0.9,
+      "flags": []
+    }
+  ],
+  "section_totals": {
+    "A": 0.0,
+    "B": 20.0,
+    "C": 70.0,
+    "D": 12.0,
+    "?": 17.0
+  },
+  "total": 119.0,
+  "max_total": 100.0
+}

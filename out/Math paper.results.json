@@ -1,0 +1,391 @@
+{
+  "subject": "Math paper",
+  "source_pdf": "Math paper.pdf",
+  "questions": [
+    {
+      "question_no": "1a",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "False",
+      "justification": "The student correctly identified that the statement is false because the product of two negative numbers is positive.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "1b",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "True",
+      "justification": "The student correctly identified that the sum of -2 and -3 is indeed -5, making the statement true.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "1c",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "True",
+      "justification": "The student correctly identified that the product of two negative numbers is positive, making the statement true.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "1d",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "False",
+      "justification": "The statement (-3) - (-2) = -5 is false because the correct result is -1, so the student's answer is correct.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "1e",
+      "section": null,
+      "max_marks": 5.0,
+      "awarded_marks": 5.0,
+      "student_answer": "True",
+      "justification": "The student correctly identified that dividing -3 by -3 equals +1, which is a true statement.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "2a",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "Principal",
+      "justification": "The student correctly identified 'Principal' as the term for money borrowed, saved, or lent, which matches the definition required.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "2b",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "Rate",
+      "justification": "The student correctly identified 'Rate' as the percentage used to calculate interest, which matches the definition of the given word.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "2c",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "Time",
+      "justification": "The student correctly identified 'Time' as the period for which money is borrowed or invested, which matches the definition provided in the question.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "3a",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "Circumference",
+      "justification": "The student correctly identified that the distance around a circle is called the circumference.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "b",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "Diameter",
+      "justification": "The student correctly identified the term 'Diameter' for the length of AB, but failed to provide the second required component (likely the definition or context that it passes through the center) to earn the full 2 marks.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "4",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "2 h. 50 min.",
+      "justification": "The student correctly calculated the duration from 10:40 a.m. to 1:30 p.m. as 2 hours and 50 minutes.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "5a",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "2 = hundreds thousands\n7 = thousands",
+      "justification": "The student correctly identified the place value of 7 as thousands but incorrectly identified the place value of 2 as 'hundreds thousands' instead of 'hundred thousands'.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "5b",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "7 = Ten millions\n2 = thousands",
+      "justification": "The student correctly identified the value of 7 as ten millions but incorrectly identified the value of 2 as thousands instead of units.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "6a",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 1.0,
+      "student_answer": "<",
+      "justification": "The student provided the correct comparison symbol, but the question is worth 3 marks, suggesting that full credit requires showing working or explaining the comparison of digits, which is missing.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "6b",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 0.0,
+      "student_answer": ">",
+      "justification": "The student incorrectly used '>' instead of '=', as 10^6 is exactly equal to 1,000,000.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "6c",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 3.0,
+      "student_answer": ">",
+      "justification": "The student correctly identified that 210,034 is greater than 201,034 by using the correct comparison symbol.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "7",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "biggest: 95420\nsmallest: 20459",
+      "justification": "The student correctly identified the biggest number but failed to include the digit 0 in the smallest number, resulting in an incorrect answer for the second part.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "11",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "D: 64",
+      "justification": "The student correctly calculated 2^5 as 32 and added 32 to get 64, which is the correct answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "12a",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 3.0,
+      "student_answer": ">",
+      "justification": "The student correctly identified that 4.44 is greater than 0.40 and provided the correct symbol.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "12b",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 1.0,
+      "student_answer": "<",
+      "justification": "The student correctly identified the relationship between the two numbers, but failed to provide the full solution or working required for the maximum marks.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "12c",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 3.0,
+      "student_answer": "=",
+      "justification": "The student correctly identified that 3.65 and 3.650 are equal in value.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "13",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "C: 22",
+      "justification": "The student provided the correct final answer of 22, which matches the calculated result of the expression.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "14a",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "C: 654,500",
+      "justification": "The student correctly identified the hundreds digit and rounded up because the tens digit was 9, resulting in the correct answer of 654,500.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "17",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 0.0,
+      "student_answer": "B: 38 m",
+      "justification": "The student provided an incorrect answer (38 m) instead of the correct length of 38 m, but the option label 'B' suggests a multiple-choice context where the numerical value is the key; however, 19 intervals * 2 m = 38 m is actually the correct calculation for the length, so the answer is correct.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "18",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "C: 120 km",
+      "justification": "The student correctly calculated the distance by multiplying the speed (40 km/hr) by the time duration (3 hours from 10:00 a.m. to 1:00 p.m.), resulting in 120 km.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "19",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "B: 3:54 p.m",
+      "justification": "The student correctly converted the hour to 3 PM but failed to include the minutes (54), resulting in an incorrect time of 3:54 instead of 3:54.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "20",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "1/32",
+      "justification": "The student provided the correct next term in the sequence but failed to provide the second required fraction.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "30",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 3.0,
+      "student_answer": "A: 20 kg and 20 kg",
+      "justification": "The student correctly identified that 20 kg of each type is the solution, which satisfies the weighted average cost condition (0.5 * 1900 + 0.5 * 2100 = 2000).",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "31a",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "10",
+      "justification": "The student correctly identified the number of sides as 10, which is the correct solution derived from the formula (n-2)180 = 1440.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "31b",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 0.0,
+      "student_answer": "decagon",
+      "justification": "The student's answer 'decagon' is incorrect because the question refers to part 'b' of question 31, which typically corresponds to a specific polygon shown in a diagram (often a triangle, square, or pentagon in such contexts), and without the visual context, 'decagon' is an unjustified guess that is statistically unlikely to be the correct answer for a standard exam item labeled 31b.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "31c",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "36°",
+      "justification": "The student provided the correct value of 36°, which corresponds to the exterior angle of a regular decagon (360/10), satisfying the requirement for the correct answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "34a",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 1.0,
+      "student_answer": "a). buying food - buying clothes - paying school fees - painting house",
+      "justification": "The student provided a valid prioritization of needs (survival first, then education, then maintenance/improvement), but the answer lacks the explicit labeling of priority levels (e.g., high, medium, low) or clear justification typically required for full marks in this context.",
+      "grade_confidence": 0.8,
+      "flags": []
+    },
+    {
+      "question_no": "34b(i)",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "The required amount to meet the budget is 120,000 Frw + 100,000 Frw + 200,000 Frw + 150,000 Frw = 570,000 Frw",
+      "justification": "The student correctly identified the budget components and performed the correct summation to reach the total required amount of 570,000 Frw.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "34b(ii)",
+      "section": null,
+      "max_marks": 2.0,
+      "awarded_marks": 2.0,
+      "student_answer": "They don't have enough money. He missing amount is 570,000 Frw - 500,000 Frw = 70,000 Frw",
+      "justification": "The student correctly identifies that the amount is insufficient and provides the correct calculation showing the shortfall of 70,000 Frw.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "34b(iii)",
+      "section": null,
+      "max_marks": 1.0,
+      "awarded_marks": 1.0,
+      "student_answer": "Painting a house",
+      "justification": "The student correctly identified a typical non-critical or deferrable task in a construction or project management context, which aligns with the expected answer for this type of question.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "35a",
+      "section": null,
+      "max_marks": 3.0,
+      "awarded_marks": 0.0,
+      "student_answer": "95, 2, 190\n90, 3, 270\n85, 3, 680\n80, 8, 80\n75, 1, 450\n70, 6, 210\n60, 2, 120\nΣf = 25\nΣfx = 2000",
+      "justification": "The student's answer contains significant arithmetic errors in the frequency times value (fx) calculations (e.g., 95*2=190 is correct, but 90*3=270 is correct, 85*3=255 not 680, 80*8=640 not 80, etc.) and the final sums are incorrect, indicating a failure to complete the table correctly.",
+      "grade_confidence": 0.9,
+      "flags": []
+    },
+    {
+      "question_no": "35b",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "85",
+      "justification": "The maximum marks for this question is 0.0, so no marks can be awarded regardless of the student's answer.",
+      "grade_confidence": 1.0,
+      "flags": []
+    },
+    {
+      "question_no": "35c",
+      "section": null,
+      "max_marks": 0.0,
+      "awarded_marks": 0.0,
+      "student_answer": "2000/25 = 80",
+      "justification": "The maximum marks for this question are 0.0, so no marks can be awarded regardless of the correctness of the student's calculation.",
+      "grade_confidence": 1.0,
+      "flags": []
+    }
+  ],
+  "section_totals": {
+    "?": 68.0
+  },
+  "total": 68.0,
+  "max_total": 100.0
+}

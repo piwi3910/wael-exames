@@ -1,0 +1,462 @@
+{
+  "subject": "SET paper",
+  "source_pdf": "SET paper.pdf",
+  "questions": [
+    {
+      "section": null,
+      "question_no": "1",
+      "max_marks": 1.0,
+      "question_text": "Select and circle a tool that is used for transport on a farm.",
+      "student_answer": "A",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "2",
+      "max_marks": 2.0,
+      "question_text": "Choose and circle two ways of maintaining mechanical tools.",
+      "student_answer": "C, E",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "3a",
+      "max_marks": 2.0,
+      "question_text": "State the use of the following carpentry tools: a) A meter ruler",
+      "student_answer": "used to measure length of the wood",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "3b",
+      "max_marks": 2.0,
+      "question_text": "State the use of the following carpentry tools: b) A wood saw",
+      "student_answer": "used for cutting wood",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "4a",
+      "max_marks": 2.0,
+      "question_text": "State whether the following statements are True or False. a) A blacksmith uses a hammer to shape metal.",
+      "student_answer": "True",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "4b",
+      "max_marks": 2.0,
+      "question_text": "State whether the following statements are True or False. b) A simple machine uses a single applied force to do work against single load.",
+      "student_answer": "True",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "5",
+      "max_marks": 3.0,
+      "question_text": "Complete the table below with the following tools: Brace, wood saw, plane.",
+      "student_answer": "Cutting tools: wood saw, Drilling tools: brace, Smoothing tools: plane",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "6",
+      "max_marks": 2.0,
+      "question_text": "Fruits are produced from...",
+      "student_answer": "D) flower",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "7",
+      "max_marks": 1.0,
+      "question_text": "Why do most flowers have scent?",
+      "student_answer": "To attract pollinators",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "8",
+      "max_marks": 3.0,
+      "question_text": "Match the plants below with the part we eat.",
+      "student_answer": "",
+      "read_confidence": 0.85
+    },
+    {
+      "section": null,
+      "question_no": "9",
+      "max_marks": 1.0,
+      "question_text": "The process by which plants lose water into the atmosphere through the leaves is known as",
+      "student_answer": "Transpiration",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "10",
+      "max_marks": 2.0,
+      "question_text": "Writing skills can be defined as",
+      "student_answer": "B) Skills which help you to type data.",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "11",
+      "max_marks": 2.0,
+      "question_text": "State whether the statements below are True or False.\na) A computer requires programs to function.\nb) Scratch and Turtle art are two popular programming languages for kids.",
+      "student_answer": "a) True\nb) True",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "12a",
+      "max_marks": 2.0,
+      "question_text": "...... for underlining a word or a sentence.",
+      "student_answer": "Underline text",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "12b",
+      "max_marks": 2.0,
+      "question_text": "...... for changing the colour of the text.",
+      "student_answer": "Colouring the text",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "13i",
+      "max_marks": 2.0,
+      "question_text": "Electronic device that accepts, processes, organises and stores data is known as......",
+      "student_answer": "Computer",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "13ii",
+      "max_marks": 2.0,
+      "question_text": "A large group of computers connected to each other is......",
+      "student_answer": "Internet",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "14",
+      "max_marks": 2.0,
+      "question_text": "Arrange the following ways of saving a document:",
+      "student_answer": "b a c d",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "15",
+      "max_marks": 1.0,
+      "question_text": "Why should people learn scratch activity?",
+      "student_answer": "To create dialogue and cartoons",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "16",
+      "max_marks": 2.0,
+      "question_text": "Which of the following tools can be used if you want to make motorcycle using wires?",
+      "student_answer": "D) Pliers",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "17",
+      "max_marks": 2.0,
+      "question_text": "State any safety precautions to take while using tools and materials.",
+      "student_answer": "Store tools properly. Handle tools with much care.",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "18",
+      "max_marks": 2.0,
+      "question_text": "Match the following materials with the tools named below.",
+      "student_answer": "a) Wires - i) Socks\nb) Manila paper - ii) a toy bicycle\nc) Thread - iii) a ball\nd) Banana fibre - iv) Polygons",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "19",
+      "max_marks": 2.0,
+      "question_text": "Choose the best alternative from the brackets to fill the gap.",
+      "student_answer": "teaching activities",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "20",
+      "max_marks": 2.0,
+      "question_text": "Select the best definition of sound.",
+      "student_answer": "C) Energy which enables us to hear.",
+      "read_confidence": 0.99
+    },
+    {
+      "section": null,
+      "question_no": "21",
+      "max_marks": 2.0,
+      "question_text": "State whether the statements below are True or False.",
+      "student_answer": "a) True\nb) True",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "22",
+      "max_marks": 2.0,
+      "question_text": "Annet is preparing tea in an aluminium kettle, identify any changes observed during that boiling process.",
+      "student_answer": "Evaporation\nCondensation",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "23",
+      "max_marks": 2.0,
+      "question_text": "Choose the best alternative from the brackets to fill the gaps.",
+      "student_answer": "Cities",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "24",
+      "max_marks": 1.0,
+      "question_text": "Why is it not advisable to stay in a closed room with a burning charcoal stove?",
+      "student_answer": "because burning charcoals produces carbon monoxide which is poisonous",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "25",
+      "max_marks": 2.0,
+      "question_text": "The District of Gakenke is hilly. How do farmers in Gakenke overcome the problem of soil erosion?",
+      "student_answer": "Terracing; planting trees",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "26",
+      "max_marks": 3.0,
+      "question_text": "Match the following types of soil with their uses.",
+      "student_answer": "a) Clay soil -> i) Good for crops\nb) Sand soil -> ii) Modeling pots\nc) Loam soil -> iii) Making bricks",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "27",
+      "max_marks": 2.0,
+      "question_text": "State whether the following statements are True or False.",
+      "student_answer": "a) True\nb) True",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "28",
+      "max_marks": 3.0,
+      "question_text": "Match the following wastes with their sources.",
+      "student_answer": "a) Used engine oil -> i) Agricultural waste\nb) Raw sewage -> ii) Waste from automobiles\nc) Plant remains -> iii) Industrial waste",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "29",
+      "max_marks": 2.0,
+      "question_text": "Study the following alternatives and underline those which can cause poultry diseases.",
+      "student_answer": "i) Poor hygiene.\niv) Vaccinating chickens.",
+      "read_confidence": 0.85
+    },
+    {
+      "section": null,
+      "question_no": "30",
+      "max_marks": 2.0,
+      "question_text": "is a mammal",
+      "student_answer": "B) Dog",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "31",
+      "max_marks": 2.0,
+      "question_text": "The grouping of animals according to their common characteristics is called",
+      "student_answer": "B) Classification.",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "32a",
+      "max_marks": 2.0,
+      "question_text": "a) Coccidiosis is an infectious disease of chicken.",
+      "student_answer": "True",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "32b",
+      "max_marks": 2.0,
+      "question_text": "b) Incubation takes 21 days.",
+      "student_answer": "False",
+      "read_confidence": 0.96
+    },
+    {
+      "section": null,
+      "question_no": "33",
+      "max_marks": 2.0,
+      "question_text": "Select and circle two problems faced by farmers in Rwanda.",
+      "student_answer": "A) Lack of enough pasture\nC) Parasites and diseases",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "34a",
+      "max_marks": 2.0,
+      "question_text": "a) Tongue enables us to balance our body.",
+      "student_answer": "False",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "34b",
+      "max_marks": 2.0,
+      "question_text": "b) Retina is the outer layer of the eye.",
+      "student_answer": "False",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "35",
+      "max_marks": 2.0,
+      "question_text": "muscles is on the front of the upper arm",
+      "student_answer": "C) Involuntary",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "36",
+      "max_marks": 2.0,
+      "question_text": "Choose the process which takes place in the mouth during digestion.",
+      "student_answer": "B) Ingestion.",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "37",
+      "max_marks": 3.0,
+      "question_text": "Match the deficiency diseases with their causes.",
+      "student_answer": "a) Marasmus - i) Lack of iodine in diet.\nb) Rickets - iii) Lack of vitamin D calcium.\nc) Goitre - ii) Lack of enough food.",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "38",
+      "max_marks": 2.0,
+      "question_text": "Complete the following sentences using the words below. Lungs, Diaphragm, Bronchioles.",
+      "student_answer": "a) The Diaphragm separates chest cavity from abdomen.\nb) Lungs is where gaseous exchange takes place in the body.",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "39",
+      "max_marks": 2.0,
+      "question_text": "Classify the foods given below according to their groups. Maize, oranges, beans.",
+      "student_answer": "Carbohydrates: Maize\nProteins: Beans\nVitamins: Orange",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "40",
+      "max_marks": 2.0,
+      "question_text": "As an adolescent boy or girl in P6, what are some responsible behavior can you take to make right decisions concerning your life.",
+      "student_answer": "Abstinence\nChoose good friends",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "41",
+      "max_marks": 2.0,
+      "question_text": "Name the blood vessels marked A, B, C and D.",
+      "student_answer": "A. Pulmonary veins\nB. Aorta\nC. Vena cava\nD. Pulmonary artery",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "42",
+      "max_marks": 2.0,
+      "question_text": "Explain how you can properly maintain the respiratory system.",
+      "student_answer": "Doing regular physical exercise\nDrinking enough water\nAvoid smoking\nGet vaccinated",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "43",
+      "max_marks": 2.0,
+      "question_text": "How should a Primary 6 learner avoid early pregnancy?",
+      "student_answer": "Abstinence\nAvoid alcohol",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "44",
+      "max_marks": 2.0,
+      "question_text": "Arrange the following in order of occurrence. Foetus_ Zygote_ baby_ embryo.",
+      "student_answer": "Zygote - embryo - Foetus - baby",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "45",
+      "max_marks": 2.0,
+      "question_text": "Classify with a Tick (√) the materials in the column given below.",
+      "student_answer": "Glass: Non-metal\nNail: Metal\nCoin: Metal\nWooden spoon: Non-metal",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "46a",
+      "max_marks": 2.0,
+      "question_text": "Electrician wears gloves to prevent electric shock.",
+      "student_answer": "True",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "46b",
+      "max_marks": 2.0,
+      "question_text": "The switch is used to open and close the circuit.",
+      "student_answer": "False",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "47",
+      "max_marks": 2.0,
+      "question_text": "Solar panels change sunlight into... form of energy.",
+      "student_answer": "electrical",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "48",
+      "max_marks": 2.0,
+      "question_text": "...... is the boiling point of water while...... is the melting point of ice.",
+      "student_answer": "100°c, 0°c",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "49",
+      "max_marks": 2.0,
+      "question_text": "Match the parts of the simple electric circuit with their roles.",
+      "student_answer": "a) Dry cell - i) break and complete the circuit\nb) Bulb - iv) converts electrical energy into light energy.\nc) Wire - ii) transmit electric current.\nd) Switch - iii) produce energy.",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "50",
+      "max_marks": 2.0,
+      "question_text": "Draw a magnet and label the two poles.",
+      "student_answer": "N S",
+      "read_confidence": 0.95
+    }
+  ]
+}

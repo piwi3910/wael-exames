@@ -1,0 +1,310 @@
+{
+  "subject": "Math paper",
+  "source_pdf": "Math paper.pdf",
+  "questions": [
+    {
+      "section": null,
+      "question_no": "1a",
+      "max_marks": 5.0,
+      "question_text": "Which of the following statements is true or false? a) (-3) × (-2) = -6",
+      "student_answer": "False",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "1b",
+      "max_marks": 5.0,
+      "question_text": "Which of the following statements is true or false? b) (-2) + (-3) = -5",
+      "student_answer": "True",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "1c",
+      "max_marks": 5.0,
+      "question_text": "Which of the following statements is true or false? c) (-2) × (-3) = +6",
+      "student_answer": "True",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "1d",
+      "max_marks": 5.0,
+      "question_text": "Which of the following statements is true or false? d) (-3) - (-2) = -5",
+      "student_answer": "False",
+      "read_confidence": 0.96
+    },
+    {
+      "section": null,
+      "question_no": "1e",
+      "max_marks": 5.0,
+      "question_text": "Which of the following statements is true or false? e) (-3) : (-3) = +1",
+      "student_answer": "True",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "2a",
+      "max_marks": 1.0,
+      "question_text": "Complete the following sentences using the meaning of the given words: Time, Principal, Rate. a) The money borrowed, saved or lent is ......",
+      "student_answer": "Principal",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "2b",
+      "max_marks": 1.0,
+      "question_text": "Complete the following sentences using the meaning of the given words: Time, Principal, Rate. b) The percentage used to calculate interest is ......",
+      "student_answer": "Rate",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "2c",
+      "max_marks": 1.0,
+      "question_text": "Complete the following sentences using the meaning of the given words: Time, Principal, Rate. c) ...... is the period that the borrowed money is invested.",
+      "student_answer": "Time",
+      "read_confidence": 0.94
+    },
+    {
+      "section": null,
+      "question_no": "3a",
+      "max_marks": 2.0,
+      "question_text": "Complete the sentences below using radius, diameter or circumference. a) The distance around the circle is ......",
+      "student_answer": "Circumference",
+      "read_confidence": 0.96
+    },
+    {
+      "section": null,
+      "question_no": "b",
+      "max_marks": 2.0,
+      "question_text": "The length of AB in this circle is known as...",
+      "student_answer": "Diameter",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "4",
+      "max_marks": 2.0,
+      "question_text": "A meeting started at 10:40 a.m. and ended at 1:30 p.m. The duration of this meeting is ... h. ... min.",
+      "student_answer": "2 h. 50 min.",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "5a",
+      "max_marks": 2.0,
+      "question_text": "What are the place values of 2 and 7 in the number 3,297,354?",
+      "student_answer": "2 = hundreds thousands\n7 = thousands",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "5b",
+      "max_marks": 2.0,
+      "question_text": "What are the values of 2 and 7 in the number 675,982,840?",
+      "student_answer": "7 = Ten millions\n2 = thousands",
+      "read_confidence": 0.96
+    },
+    {
+      "section": null,
+      "question_no": "6a",
+      "max_marks": 3.0,
+      "question_text": "Compare the numbers using <, > or =\n537,926 ... 573,926",
+      "student_answer": "<",
+      "read_confidence": 0.99
+    },
+    {
+      "section": null,
+      "question_no": "6b",
+      "max_marks": 3.0,
+      "question_text": "Compare the numbers using <, > or =\n10^6 ... 1,000,000",
+      "student_answer": ">",
+      "read_confidence": 0.99
+    },
+    {
+      "section": null,
+      "question_no": "6c",
+      "max_marks": 3.0,
+      "question_text": "Compare the numbers using <, > or =\n210,034 ... 201,034",
+      "student_answer": ">",
+      "read_confidence": 0.99
+    },
+    {
+      "section": null,
+      "question_no": "7",
+      "max_marks": 2.0,
+      "question_text": "By using the following digits: 5; 2; 9; 4; 0; Write the biggest and the smallest whole number formed by all five digits.",
+      "student_answer": "biggest: 95420\nsmallest: 20459",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "11",
+      "max_marks": 2.0,
+      "question_text": "2^5 + 32 =",
+      "student_answer": "D: 64",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "12a",
+      "max_marks": 3.0,
+      "question_text": "4.44 _ 0.40",
+      "student_answer": ">",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "12b",
+      "max_marks": 3.0,
+      "question_text": "3.56 _ 3.65",
+      "student_answer": "<",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "12c",
+      "max_marks": 3.0,
+      "question_text": "3.65 _ 3.650",
+      "student_answer": "=",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "13",
+      "max_marks": 2.0,
+      "question_text": "5.5 x 0.2 / 0.05 =",
+      "student_answer": "C: 22",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "14a",
+      "max_marks": 1.0,
+      "question_text": "Round off 654,497 to the nearest hundreds.",
+      "student_answer": "C: 654,500",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "17",
+      "max_marks": 2.0,
+      "question_text": "A farmer planted 20 trees along a terrace of his land. The trees were planted at intervals of 2 m. What is the length of the terrace planted with trees?",
+      "student_answer": "B: 38 m",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "18",
+      "max_marks": 2.0,
+      "question_text": "A cyclist left SANZE at 10:00 a.m., travelling at 40 km/hr. He arrived at its destination at 1:00 p.m. The distance covered is:",
+      "student_answer": "C: 120 km",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "19",
+      "max_marks": 2.0,
+      "question_text": "Change 15:54hr from 24-hour format to 12-hour format. Write the best answer.",
+      "student_answer": "B: 3:54 p.m",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "20",
+      "max_marks": 2.0,
+      "question_text": "Fill in the two following fractions in the sequence below: 1/2, 1/4, 1/8, 1/16, ...",
+      "student_answer": "1/32",
+      "read_confidence": 0.9
+    },
+    {
+      "section": null,
+      "question_no": "30",
+      "max_marks": 3.0,
+      "question_text": "A shopkeeper has a mixture of red sorghum flour and white sorghum flour weighing 40 kg. One type costs 1,900 Frw per kg and another costs 2,100 Frw per kg. If the mixture is sold at 2,000 Frw per kg, find the number of kg of each type.",
+      "student_answer": "A: 20 kg and 20 kg",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "31a",
+      "max_marks": 2.0,
+      "question_text": "The sum of interior angles of a regular polygon is 1440°. a) Find the number of sides of this polygon.",
+      "student_answer": "10",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "31b",
+      "max_marks": 1.0,
+      "question_text": "b) Name the polygon.",
+      "student_answer": "decagon",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "31c",
+      "max_marks": 1.0,
+      "question_text": "c) Find the size of the exterior angle of this regular polygon.",
+      "student_answer": "36°",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "34a",
+      "max_marks": 2.0,
+      "question_text": "Order the family needs according to priority.",
+      "student_answer": "a). buying food - buying clothes - paying school fees - painting house",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "34b(i)",
+      "max_marks": 2.0,
+      "question_text": "How much money does the family require to meet their budget?",
+      "student_answer": "The required amount to meet the budget is 120,000 Frw + 100,000 Frw + 200,000 Frw + 150,000 Frw = 570,000 Frw",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "34b(ii)",
+      "max_marks": 2.0,
+      "question_text": "Do they have the required amount?",
+      "student_answer": "They don't have enough money. He missing amount is 570,000 Frw - 500,000 Frw = 70,000 Frw",
+      "read_confidence": 0.97
+    },
+    {
+      "section": null,
+      "question_no": "34b(iii)",
+      "max_marks": 1.0,
+      "question_text": "State the item that can be done later.",
+      "student_answer": "Painting a house",
+      "read_confidence": 0.96
+    },
+    {
+      "section": null,
+      "question_no": "35a",
+      "max_marks": 3.0,
+      "question_text": "Complete this frequency table.",
+      "student_answer": "95, 2, 190\n90, 3, 270\n85, 3, 680\n80, 8, 80\n75, 1, 450\n70, 6, 210\n60, 2, 120\nΣf = 25\nΣfx = 2000",
+      "read_confidence": 0.95
+    },
+    {
+      "section": null,
+      "question_no": "35b",
+      "max_marks": 0.0,
+      "question_text": "Modal mark is",
+      "student_answer": "85",
+      "read_confidence": 0.98
+    },
+    {
+      "section": null,
+      "question_no": "35c",
+      "max_marks": 0.0,
+      "question_text": "The mean is",
+      "student_answer": "2000/25 = 80",
+      "read_confidence": 0.97
+    }
+  ]
+}
