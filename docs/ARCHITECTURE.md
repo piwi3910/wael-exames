@@ -1,10 +1,18 @@
 # Architecture — wael-exames
 
 A local pipeline that grades scanned NESA exam PDFs entirely on the DGX Spark. It has two
-model-backed stages separated by a typed boundary: **read** (a vision model transcribes
-printed questions + handwritten answers) then **judge** (a reasoning model grades each
-question). The judge sits behind a `MarkScheme` interface so the POC's LLM-as-judge can be
-swapped for an official marking guide without touching the reading stage.
+model-backed stages separated by a typed boundary: **read** (transcribe printed questions +
+student answers) then **judge** (a reasoning model grades each question). The judge sits
+behind a `MarkScheme` interface so the LLM-as-judge can be swapped for an official marking
+guide without touching the reading stage.
+
+> **Note (2026-06-23):** the **read** stage is now a *hybrid* transcriber
+> (`examgrader/dots_transcriber.py`): **dots.ocr** reads the printed questions + marks,
+> **qwen3-vl** reads the student's answers (incl. circled options), and **qwen3.6-35b**
+> structures + merges them. This replaced the single-VLM transcriber (`transcriber.py`, still
+> in the tree) which over-read marks and missed circled answers. Diagrams below that show one
+> "transcriber/qwen3-vl" read stage predate this; the **judge**, schemas, report, marking
+> guide, and reconciliation are unchanged.
 
 ## 1. System context
 

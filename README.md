@@ -1,15 +1,19 @@
 # wael-exames — local exam grading
 
-Grades scanned NESA exam PDFs on the DGX Spark using a two-stage local-LLM pipeline:
-`pdftoppm` render → `qwen3-vl` (handwriting transcription, port 8003) →
-`qwen3.6-35b` (grading, port 8888) → JSON + Markdown report.
+Grades scanned NESA exam PDFs on the DGX Spark using a **hybrid local-LLM pipeline**:
+`pdftoppm` render → **`dots.ocr`** reads the printed questions + marks → **`qwen3-vl`** reads
+the student's answers (incl. circled options) → **`qwen3.6-35b`** structures + merges + grades
+→ JSON + Markdown report. Using each model for what it's best at fixes mark mis-reading
+*and* captures circled answers — neither single model managed both.
 
 ```mermaid
 flowchart LR
-    pdf[("scanned<br/>exam PDF")] --> render["pdf_to_images<br/>pdftoppm"]
-    render -->|"page images"| tr["transcriber<br/>qwen3-vl :8003"]
-    tr -->|"TranscribedPaper"| gr["grader<br/>qwen3.6-35b :8888"]
-    gr -->|"GradedPaper"| rep["report"]
+    pdf[("scanned<br/>exam PDF")] --> render["pdf_to_images<br/>pdftoppm (all pages)"]
+    render --> ocr["dots.ocr :8004<br/>printed questions + marks"]
+    render --> vlm["qwen3-vl :8003<br/>student answers"]
+    ocr --> merge["qwen3.6-35b :8888<br/>structure + merge + grade"]
+    vlm --> merge
+    merge --> rep["report"]
     rep --> out[("results.json<br/>report.md<br/>transcript.json")]
 ```
 
@@ -26,14 +30,17 @@ written to `out/`. Full design with more diagrams: [`docs/ARCHITECTURE.md`](docs
   (ImageMagick). On macOS: `brew install uv poppler imagemagick`.
 - **Install deps:** from the repo root, `uv sync` (creates the 3.12 venv and installs
   pydantic/httpx/pytest from `uv.lock`).
-- **DGX models must be up.** Both endpoints in `examgrader/config.py` must answer `200`:
+- **DGX models must be up.** The hybrid needs **three** endpoints (in `examgrader/config.py`)
+  answering `200`:
 
-      curl -s -o /dev/null -w "vlm:%{http_code}\n"    http://192.168.10.246:8003/v1/models
-      curl -s -o /dev/null -w "grader:%{http_code}\n" http://192.168.10.246:8888/v1/models
+      curl -s -o /dev/null -w "ocr:%{http_code}\n"    http://192.168.10.246:8004/v1/models  # dots.ocr
+      curl -s -o /dev/null -w "vlm:%{http_code}\n"    http://192.168.10.246:8003/v1/models  # qwen3-vl
+      curl -s -o /dev/null -w "grader:%{http_code}\n" http://192.168.10.246:8888/v1/models  # qwen3.6-35b
 
-  If either is not `200`, the vision/grader container is stopped — restart on the DGX
-  (`ssh dgx-spark`, then `~/launch-qwen3-vl.sh` for the vision model; see the design spec
-  for the grader). Each paper takes ~2 minutes to grade.
+  `dots.ocr` (`:8004`) is **not part of the default production fleet** — start it before
+  grading: `ssh dgx-spark 'docker start vllm-dots-ocr'` (it has memory headroom only when the
+  box isn't full). qwen3-vl is `~/launch-qwen3-vl.sh`. A paper takes a few minutes (3 model
+  calls per page, concurrency 2).
 
 ### 1. Grade all three at once
 
@@ -80,42 +87,42 @@ healthy before a live run.
 
 ## How it works
 
-1. `examgrader/pdf_to_images.py` — `pdftoppm` renders pages; near-blank scans are dropped.
-2. `examgrader/transcriber.py` — sends each page to the vision model, which returns
-   structured `{question, max_marks, student_answer, read_confidence}` records. A single
-   unreadable page or question is skipped, never the whole paper. `examgrader/markmap.py`
-   reads the paper's stated total from the instructions page and the transcriber re-runs (up
-   to `max_transcribe_passes`) to best match it — a mismatch is flagged, not hidden.
+1. `examgrader/pdf_to_images.py` — `pdftoppm` renders **all** pages (sparse exam pages with
+   big rough-work whitespace must not be dropped, or half the questions vanish).
+2. `examgrader/dots_transcriber.py` — the hybrid transcriber, per page:
+   - **`dots.ocr`** (`:8004`) faithfully transcribes the printed page;
+   - `qwen3.6-35b` structures that into questions + `max_marks` (no answers);
+   - **`qwen3-vl`** (`:8003`) is then asked for the student's answers to **those exact
+     question numbers** (so circled/handwritten answers align), and they're attached.
+   Section headers are carried across pages; one bad page/question is skipped, never the paper.
+   `examgrader/markmap.py` reads the stated total and the report flags any mismatch.
 3. `examgrader/grader.py` — the `MarkScheme` interface grades each question: `LLMJudge` by
-   default, or `GuideMarkScheme` with `--guide` (deterministic, marking-guide-driven). The
-   reading stage is untouched either way.
+   default, or `GuideMarkScheme` with `--guide` (deterministic, marking-guide-driven).
 4. `examgrader/report.py` — writes the per-question JSON + a readable Markdown report.
 
-## Results (all three graded, regenerated 2026-06-22)
+The older single-model `qwen3-vl` transcriber (`examgrader/transcriber.py`) is kept but no
+longer wired in — it over-read marks and couldn't see circled answers.
+
+## Results (hybrid pipeline, 2026-06-23)
 
 Every paper is scored on a normalized **0–100 scale** (`score_100 = 100 × awarded ÷
-max_marks`), so grades are comparable across papers and can never exceed 100. The committed
-grades under `out/` are from this run:
+max_marks`) and is **reconciled** against the paper's own stated total: if detected marks
+don't match, the report flags it. With the hybrid pipeline:
 
-Every paper is scored on a normalized **0–100 scale** and is **reconciled** against the
-paper's own stated total (read from the instructions page): if the detected marks don't match,
-the report flags it. The committed grades under `out/` are from this run:
+| Paper | Grade /100 | Questions | Blank answers | Marks checksum |
+|-------|-----------|-----------|---------------|----------------|
+| English | 64.8 | 63 | 1  | 91 / 100 (⚠ −9) |
+| Math    | 58.5 | 55 | 0  | 94 / 100 (⚠ −6) |
+| SET     | 67.0 | 63 | 0  | **100 / 100 ✓** |
 
-| Paper | Grade /100 | Raw | Stated total | Marks checksum |
-|-------|-----------|-----|--------------|----------------|
-| SET     | 70.0 | 70/100  | 100 | ✓ reconciles (100 = 100) |
-| Math    | 76.8 | 43/56   | 100 | ⚠ under-read (56) |
-| English | 66.8 | 125/187 | 100 | ⚠ over-read (187) |
+The hybrid finally gets **both** right: marks are accurate and reconcile (vs the old single-VLM
+145–187 over-read), and student answers are captured (0–1 blanks vs ~24 before). The small
+remaining mark gaps (English 91, Math 94) are flagged by the checksum. For papers with stated
+**section budgets** (English A/B/C/D) the report/CLI also show a **per-section** breakdown.
 
-The checksum is the key trust signal. **SET reconciles exactly**, so its denominator is the
-real 100. Math and English don't — the vision model mis-reads their per-question marks (Math
-under, English over). For papers with stated **section budgets** (English A/B/C/D), the report
-and CLI also show a **per-section** breakdown, pinpointing where it's off:
-
-```
-Section A: stated 20, detected 36 (+16)
-Section C: stated 40, detected 71 (+31)
-```
+Caveat that still stands: these are the LLM-judge's grades of correctly-captured answers —
+without an official answer key we can't *verify* the scores. The transcription foundation is
+now solid; a **marking guide** (`--guide`) is what makes the grades themselves authoritative.
 
 Targeted re-transcription of off-budget sections is available (`max_transcribe_passes > 1`)
 but **off by default**: measured, it doesn't fix the VLM's *systematic* mark mis-reads
@@ -126,11 +133,11 @@ un-reconciled scores as a demonstration; LLM-judge grades also vary run-to-run.
 
 ## Performance
 
-Transcription and grading both run their model calls concurrently (thread pool;
-`vlm_concurrency` and `grader_concurrency` in `config.py`). Grader calls parallelize ~3.4×;
-the vision model is GPU-bound on the single GB10 and scales ~2×, so transcription is the
-dominant cost (~6 s/page). A full paper runs in roughly 75 s–2 min depending on page count.
-Lowering `render_dpi` (200→150) is the cheapest further speedup if OCR accuracy holds.
+The hybrid makes **3 model calls per page** (dots.ocr OCR, question structuring, answer
+reading) plus one grader call per question. Pages run through a thread pool at
+`vlm_concurrency` (default **2** — three models share one box, so higher concurrency caused
+request timeouts that silently dropped pages); grader calls at `grader_concurrency`. A paper
+takes a few minutes. Cost wasn't optimized for — accuracy was.
 
 ## Flags in the report
 
